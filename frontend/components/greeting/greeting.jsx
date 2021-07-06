@@ -5,7 +5,7 @@ const Greeting = ({ currentUser, logout }) => {
   const navbar = () => (
     <nav className="login-signup">
       <Link to="/login">Login</Link>
-      {/* &nbsp;or&nbsp; */}
+      &nbsp;&nbsp;
       <Link to="/signup">Sign up!</Link>
     </nav>
   );
