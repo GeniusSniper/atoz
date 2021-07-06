@@ -7,6 +7,7 @@ import SessionForm from './session_form';
 const mapStateToProps = ({ errors }) => ({
   errors: errors.session,
   formType: 'signup',
+  msg: 'Create your AtoZ account',
   navLink: <Link to="/login">log in instead</Link>,
 })
 
