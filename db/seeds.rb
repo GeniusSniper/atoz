@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+ActiveRecord::Base.transaction do
+    User.destroy_all
+    User.reset_pk_sequence
+    Item.destroy_all
+    Item.reset_pk_sequence
+end
