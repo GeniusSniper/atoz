@@ -9,8 +9,8 @@ import Login_form_container from './session_form/login_form_container';
 const App = () => (
     <>
     <header>
-        {/* <Link to="/"><img src="" alt="AtoZ" /></Link> */}
-        <Link to='/'>AtoZ</Link>
+        <Link to="/"><img src="" alt="AtoZ" /></Link>
+        {/* <Link to='/'>AtoZ</Link> */}
     </header>
     <Greeting_container/>
     <Switch>
