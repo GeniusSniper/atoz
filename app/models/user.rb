@@ -32,6 +32,7 @@ class User < ApplicationRecord
 
     def total_amount
         @cart.inject { |acc, i| acc.price += i}
+    end
   
     def add_item(item)
         @cart ||= []
