@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
       address: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmitDemo = this.handleSubmitDemo.bind(this);
   }
 
   update(field) {
@@ -22,6 +23,12 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    this.props.processForm(user);
+  }
+
+  handleSubmitDemo(e){
+    e.preventDefault();
+    const user = Object.assign({}, this.props.demo);
     this.props.processForm(user);
   }
 
@@ -39,19 +46,26 @@ class SessionForm extends React.Component {
 
   render() {
     let sign_up_form = () => null;
-    if (this.props.formType === 'signup'){
-    sign_up_form = () => (
-        <>
-            <label>Email:
-                <input type="email" value={this.state.email} onChange={this.update('email')} className="login-input"/>
-            </label>
-            <br/>
-            <label>Address:
-                <input type="text" value={this.state.address} onChange={this.update('address')} className="login-input"/>
-            </label>
-            <br />
-        </>
-    )
+    let demo_user = () => null;
+    if (this.props.formType === 'signup') {
+      sign_up_form = () => (
+          <>
+              <label>Email:
+                  <input type="email" value={this.state.email} onChange={this.update('email')} className="login-input"/>
+              </label>
+              <br/>
+              <label>Address:
+                  <input type="text" value={this.state.address} onChange={this.update('address')} className="login-input"/>
+              </label>
+              <br />
+          </>
+      )
+    } else {
+      demo_user = () => (
+        <form className='demo' onSubmit={this.handleSubmitDemo}>
+          <button>Demo User</button>
+        </form>
+      )
     }
     return (
       <div className="login-form-container">
@@ -74,6 +88,8 @@ class SessionForm extends React.Component {
             <input className="session-submit" type="submit" value={this.props.msg} />
           </div>
         </form>
+        <br />
+        {demo_user()}
       </div>
     );
   }

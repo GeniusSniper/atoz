@@ -7,6 +7,7 @@ import SessionForm from './session_form';
 const mst = ({ errors }) => ({
   errors: errors.session,
   formType: 'login',
+  demo: { username: '1234', password: '123456'},
   msg: 'Continue',
   navLink: <Link to="/signup">sign up instead</Link>,
 })

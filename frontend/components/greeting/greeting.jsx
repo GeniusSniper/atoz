@@ -12,7 +12,7 @@ const Greeting = ({ currentUser, logout }) => {
   const welcoming = () => (
     <div className="header-tag">
       <h2 className="header-name">Good night, {currentUser.username}!</h2>
-      {console.log(currentUser)}
+      {/* {console.log(currentUser)} */}
       <button className="header-button" onClick={logout}>Log Out</button>
     </div>
   );
