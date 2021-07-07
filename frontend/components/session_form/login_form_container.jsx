@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import { errors, login } from '../../actions/action';
+import { errors, login } from '../../actions/session_action';
 import SessionForm from './session_form';
 
 const mst = ({ errors }) => ({

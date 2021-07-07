@@ -11,11 +11,11 @@ const App = () => (
     <>
     <header className='header'>
         <Link to="/"><img src="" alt="AtoZ" /></Link>
-        <Greeting_container/>
     </header>
     <Switch>
         <AuthRoute exact path='/login' component={Login_form_container}/>
         <AuthRoute exact path='/signup' component={Signup_form_container}/>
+        <Route exact path='/' component={Greeting_container}/>
     </Switch>
     </>
 );
