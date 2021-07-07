@@ -9,10 +9,10 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 //containing routes and render the correct info 
 const App = () => (
     <>
-    <header>
+    <header className='header'>
         <Link to="/"><img src="" alt="AtoZ" /></Link>
+        <Greeting_container/>
     </header>
-    <Greeting_container/>
     <Switch>
         <AuthRoute exact path='/login' component={Login_form_container}/>
         <AuthRoute exact path='/signup' component={Signup_form_container}/>
