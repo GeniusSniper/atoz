@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Item from './item';
 
 class Items extends React.Component{
     componentDidMount(){
@@ -11,7 +10,9 @@ class Items extends React.Component{
         const allItem = (
             <ul>
                 {this.props.items.map(item => (
-                    <img src={`${item.image_url}`} alt="img_of_each_item" />
+                    <li key={item.id}>
+                        <a href={`items/${item.id}`}><img src={`${item.image_url}`} alt="img_of_each_item" /></a>
+                    </li>
                 ))}
             </ul>
         )

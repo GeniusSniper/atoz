@@ -1,6 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default props => (
-    <>
-    </>
-)
+class Item extends React.Component{
+    componentDidMount(){
+        this.props.needItem(this.props.match.params.id);
+    }
+
+    render(){
+        return(
+            <>
+                hi
+            </>
+        )
+    }
+};
+
+export default Item;
