@@ -13,14 +13,14 @@ const App = () => (
     <>
     <header className='header'>
         <Link to="/"><img src="" alt="AtoZ" /></Link>
-        <Route exact path='/' component={Greeting_container}/>
     </header>
-    <Route exact path='/' component={Items_container}/>
-    <Route exact path='/items/:Itemid' component={Item_container}/>
     <Switch>
         <AuthRoute exact path='/login' component={Login_form_container}/>
         <AuthRoute exact path='/signup' component={Signup_form_container}/>
+        <Route path='/' component={Greeting_container}/>
     </Switch>
+    <Route exact path='/' component={Items_container}/>
+    <Route exact path='/items/:itemId' component={Item_container}/>
     </>
 );
 

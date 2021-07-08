@@ -11,7 +11,7 @@ class Items extends React.Component{
             <ul>
                 {this.props.items.map(item => (
                     <li key={item.id}>
-                        <a href={`items/${item.id}`}><img src={`${item.image_url}`} alt="img_of_each_item" /></a>
+                        <a href={`#/items/${item.id}`}><img src={`${item.image_url}`} alt="img_of_each_item" /></a>
                     </li>
                 ))}
             </ul>
