@@ -7,7 +7,18 @@ import Root from './components/root'; // render through root compoents
 //find the element id root and replace it with root componets
 document.addEventListener('DOMContentLoaded',()=>{
     let root = document.getElementById('root');
-    const store = configureStore();
-    window.store = store;
+    let store;
+    if (window.currentUser) {
+      const preloadedState = {
+        session: { id: window.currentUser.id },
+        entities: {
+          users: { [window.currentUser.id]: window.currentUser }
+        }
+      };
+      store = configureStore(preloadedState);
+      delete window.currentUser;
+    } else {
+      store = configureStore();
+    }
     ReactDOM.render(<Root store={store}/>, root);//passing store as props 
 })
