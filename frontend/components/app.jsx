@@ -12,7 +12,7 @@ import Item_container from './items/item_container';
 const App = () => (
     <>
     <header className='header'>
-        <Link to="/"><img src="" alt="AtoZ" /></Link>
+        <Link to="/" ><img src="" alt="AtoZ" /></Link>
     </header>
     <Switch>
         <AuthRoute exact path='/login' component={Login_form_container}/>
