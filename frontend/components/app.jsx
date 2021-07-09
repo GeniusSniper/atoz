@@ -11,14 +11,14 @@ import Item_container from './items/item_container';
 //containing routes and render the correct info 
 const App = () => (
     <>
-    <header className='header'>
+    <div className='header'>
         <Link to="/" ><img src="" alt="AtoZ" /></Link>
-    </header>
     <Switch>
-        <AuthRoute exact path='/login' component={Login_form_container}/>
-        <AuthRoute exact path='/signup' component={Signup_form_container}/>
-        <Route path='/' component={Greeting_container}/>
+        <AuthRoute exact path='/login' component={Login_form_container} className='sessionForm'/>
+        <AuthRoute exact path='/signup' component={Signup_form_container} className='sessionForm'/>
+        <Route path='/' component={Greeting_container} />
     </Switch>
+    </div>
     <Route exact path='/' component={Items_container}/>
     <Route exact path='/items/:itemId' component={Item_container}/>
     </>
