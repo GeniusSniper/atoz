@@ -10,7 +10,7 @@ import Item_container from './items/item_container';
 
 //containing routes and render the correct info 
 const App = () => (
-    <>
+    <div className='mainPage'>
     <div className='header'>
         <Link to="/" ><img src="" alt="AtoZ" /></Link>
     <Switch>
@@ -21,7 +21,7 @@ const App = () => (
     </div>
     <Route exact path='/' component={Items_container}/>
     <Route exact path='/items/:itemId' component={Item_container}/>
-    </>
+    </div>
 );
 
 export default App;

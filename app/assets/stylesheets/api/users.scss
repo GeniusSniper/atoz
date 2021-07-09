@@ -7,7 +7,9 @@
     justify-content: space-between;
 }
 
-.header .sessionForm {
-    display: block;
+.header .login-form-container {
     position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-49%, -49%);
 }
