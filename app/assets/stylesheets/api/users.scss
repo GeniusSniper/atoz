@@ -8,6 +8,8 @@
 }
 
 .header .login-form-container {
-    display: block;
-    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -49%);
 }
