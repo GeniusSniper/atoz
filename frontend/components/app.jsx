@@ -14,8 +14,8 @@ const App = () => (
     <div className='header'>
         <Link to="/" ><img src="" alt="AtoZ" /></Link>
     <Switch>
-        <AuthRoute exact path='/login' component={Login_form_container} className='sessionForm'/>
-        <AuthRoute exact path='/signup' component={Signup_form_container} className='sessionForm'/>
+        <AuthRoute exact path='/login' component={Login_form_container}/>
+        <AuthRoute exact path='/signup' component={Signup_form_container}/>
         <Route path='/' component={Greeting_container} />
     </Switch>
     </div>
