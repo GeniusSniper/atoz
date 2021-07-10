@@ -13,7 +13,8 @@ def create_random_item()
       item_price: rand(400),
       num_of_item_left: rand(100),
       image_url: 'item_img.png'
-    ).photo.attach(io: URI.open('https://atoz-seeds.s3.us-east-2.amazonaws.com/item_img.png'), filename: 'item_img.png')
+    )
+    # .photo.attach(io: URI.open('https://atoz-seeds.s3.us-east-2.amazonaws.com/item_img.png'), filename: 'item_img.png')
 end
 
 User.destroy_all
