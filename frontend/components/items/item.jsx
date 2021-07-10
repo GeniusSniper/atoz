@@ -13,7 +13,7 @@ class Item extends React.Component{
             <div>
                 <h1>{item.item_name}</h1>
                 <br />
-                <img src={`${item.picture_url}`} alt="imgs" />
+                <img src={`${item.image_url}`} alt="imgs" />
                 <br />
                 <div>
                     <p>item price: {item.item_price}</p>
