@@ -1,5 +1,12 @@
 const path = require('path');
 
+let devtool;
+if (process.env.NODE_ENV==="production") {
+    devtool = "eval"
+} else {
+    devtool = "source-map"
+}
+
 module.exports = {
   context: __dirname,
   entry: './frontend/atoz.jsx',
@@ -7,6 +14,7 @@ module.exports = {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: 'bundle.js'
   },
+  devtool: devtool,
   resolve: {
     extensions: ['.js', '.jsx', '*']
   },
