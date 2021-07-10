@@ -7,13 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
-def create_random_item
+def create_random_item()
+  item_img = URI.open('https://atoz-seeds.s3.us-east-2.amazonaws.com/item_img.png')
     Item.create!(
       item_name: Faker::Commerce.product_name,
       item_price: rand(400),
       num_of_item_left: rand(100),
       image_url: 'item_img.png'
-    ).photo.attach(io: File.open("app/assets/images/item_img.png"), filename: 'item_img.png')
+    ).photo.attach(io: item_img, filename: 'item_img.png')
 end
 
 User.destroy_all
@@ -21,7 +22,7 @@ User.reset_pk_sequence
 Item.destroy_all
 Item.reset_pk_sequence
 
-User.create!( username: 'Demo', password: '******', email: 'demo@demo.com', address: 'police station')
+User.create!( username: 'Demo', password: '******', email: 'demo@demo.com', address: 'Demo City')
 
-10.times{ create_random_item }
+10.times{ create_random_item() }
 
