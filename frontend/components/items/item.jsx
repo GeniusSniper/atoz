@@ -10,7 +10,7 @@ class Item extends React.Component{
         const item = this.props.item;
         if(!item) return null;
         return(
-            <div>
+            <div className='eachItem'>
                 <h1>{item.item_name}</h1>
                 <br />
                 <img src={`${item.image_url}`} alt="imgs" />

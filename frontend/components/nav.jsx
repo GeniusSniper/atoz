@@ -8,7 +8,6 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 export default () => (
     <div className='header'>
-        <Link to="/" ><img src="" alt="AtoZ" /></Link>
         <Switch>
             <AuthRoute exact path='/login' component={Login_form_container}/>
             <AuthRoute exact path='/signup' component={Signup_form_container}/>

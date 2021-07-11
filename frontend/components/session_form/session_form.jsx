@@ -74,6 +74,7 @@ class SessionForm extends React.Component {
     }
     return (
       <div className="login-form-container">
+        <Link to="/" ><img src="" alt="atoz" className='logo'/></Link>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           Welcome to AtoZ!
           <br/>
