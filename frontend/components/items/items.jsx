@@ -8,16 +8,15 @@ class Items extends React.Component{
 
     render(){
         const allItem = (
-            <ul>
+            <ul className='grid-items'>
                 {this.props.items.map(item => (
-                    <li key={item.id}>
-                        <Link to={`items/${item.id}`}><img src={`${item.image_url}`} alt="img_of_each_item" /></Link>
-                    </li>
+                    <li key={item.id} className='gird-item' ><Link to={`items/${item.id}`}><img src={`${item.image_url}`} alt="img_of_each_item" /></Link></li>
                 ))}
             </ul>
         )
         return(
             <>
+                <br />
                 {allItem}
             </>
         )

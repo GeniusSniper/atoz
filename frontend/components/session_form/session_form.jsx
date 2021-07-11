@@ -39,13 +39,17 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
+      <>
+      <br />
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li key={`error-${i}`} className='errorMsg'>
             {error}
           </li>
         ))}
       </ul>
+      <br />
+      </>
     );
   }
 
@@ -56,13 +60,12 @@ class SessionForm extends React.Component {
       sign_up_form = () => (
           <>
               <label>Email:
-                  <input type="email" value={this.state.email} onChange={this.update('email')} className="login-input"/>
+                  <input type="email" value={this.state.email} onChange={this.update('email')} className="login-input" placeholder='email'/>
               </label>
               <br/>
               <label>Address:
-                  <input type="text" value={this.state.address} onChange={this.update('address')} className="login-input"/>
+                  <input type="text" value={this.state.address} onChange={this.update('address')} className="login-input" placeholder='address'/>
               </label>
-              <br />
           </>
       )
     } else {
@@ -74,26 +77,26 @@ class SessionForm extends React.Component {
     }
     return (
       <div className="login-form-container">
-        <Link to="/" ><img src="" alt="atoz" className='logo'/></Link>
+        <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="atoz" className='logo'/></Link>
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to AtoZ!
-          <br/>
-          Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
-            <br/>
             <label>Username:
-              <input type="text" value={this.state.username} onChange={this.update('username')} className="login-input"/>
+              <input type="text" value={this.state.username} onChange={this.update('username')} className="login-input" placeholder='username'/>
             </label>
             <br/>
-            <label>Password:
-              <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input"/>
+            <label>Password: 
+              <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='password'/>
             </label>
             <br/>
             {sign_up_form()}
-            <input className="session-submit" type="submit" value={this.props.msg} />
+            <br />
+            <button className="session-submit" type="submit">{this.props.msg}</button>
           </div>
         </form>
+        <br />
+        <p className='formTypeMsg'>{this.props.formTypeMsg}</p>
+        <p className='formTypeMsg'>{this.props.navLink}</p>
         <br />
         {demo_user()}
       </div>

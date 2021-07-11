@@ -5,3 +5,17 @@
 .eachItem{
     color: white;
 }
+
+.gird-items {
+    display: grid;
+}
+
+.gird-item{
+    display: inline-grid;
+    margin: 1em;
+}
+
+.gird-item img {
+    width: 300px;
+    height: 200px;
+}

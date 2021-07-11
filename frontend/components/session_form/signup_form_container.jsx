@@ -8,7 +8,8 @@ const mst = ({ errors }) => ({
   errors: errors.session,
   formType: 'signup',
   msg: 'Create your AtoZ account',
-  navLink: <Link to="/login">log in instead</Link>,
+  navLink: <Link to="/login">Sign-In</Link>,
+  formTypeMsg: 'Already have an account?'
 })
 
 const mdt = dispatch => ({

@@ -3,24 +3,21 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout }) => {
   const navbar = () => (
-    <>
-      <Link to="/" ><img src="" alt="AtoZ" className='logo'/></Link>
-      <nav className="login-signup">
-        <Link to="/login">Login</Link>
-        &nbsp;&nbsp;
-        <Link to="/signup">Sign up</Link>
-      </nav>
-    </>
+    <div className='nav-bar'>
+      <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="AtoZ" className='logo'/></Link>
+      <div className='login-bar'>
+        <Link to="/login" className='login'>You havn't login yet Click Here</Link>
+      </div>
+    </div>
   );
   const welcoming = () => (
-    <>
-      <Link to="/" ><img src="" alt="AtoZ" className='logo'/></Link>
+    <div className='nav-bar'>
+      <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="AtoZ" className='logo'/></Link>
       <div className="header-tag">
-        <h2 className="header-name">Good night, {currentUser.username}!</h2>
-        {/* {console.log(currentUser)} */}
+        <h2 className="header-name">Welcome to my page {currentUser.username}</h2>
         <button className="header-button" onClick={logout}>Log Out</button>
       </div>
-    </>
+    </div>
   );
 
   return currentUser ? welcoming() : navbar();

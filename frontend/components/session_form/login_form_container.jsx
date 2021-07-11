@@ -8,7 +8,8 @@ const mst = ({ errors }) => ({
   errors: errors.session,
   formType: 'login',
   msg: 'Continue',
-  navLink: <Link to="/signup">sign up instead</Link>,
+  navLink: <Link to="/signup">Create your Atoz account</Link>,
+  formTypeMsg: 'New to Atoz?'
 })
 
 const mdt = dispatch => ({
