@@ -5,24 +5,31 @@
 .eachItem{
     display: flex;
     justify-content: space-between;
+    margin: 8% 12.5% 0;
 }
 
-.gird-items {
+.grid-items {
     display: grid;
-}
-
-.gird-item{
-    display: inline-grid;
-    margin: 1em;
-}
-
-.gird-item img {
-    width: 300px;
-    height: 200px;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
 }
 
 .mainPageSession {
+    margin: 8% 12.5% 0;
     display: block;
-    padding: 0 12.5% 0;
-    margin-top: 8%;
+    border: 2px solid black;
+}
+
+.gridItemImg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 600px){
+    .gridItem{
+        // margin: 2px;
+        grid-row: span 2 / auto;
+        grid-column: span 2 / auto;
+    }    
 }

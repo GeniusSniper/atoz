@@ -10,7 +10,7 @@ class Items extends React.Component{
         const allItem = (
             <ul className='grid-items'>
                 {this.props.items.map(item => (
-                    <li key={item.id} className='gird-item' ><Link to={`items/${item.id}`}><img src={`${item.image_url}`} alt="img_of_each_item" /></Link></li>
+                    <Link to={`items/${item.id}`} key={item.id} className='gridItem'><img src={`${item.image_url}`} alt="img_of_each_item" className='gridItemImg'/></Link>
                 ))}
             </ul>
         )
