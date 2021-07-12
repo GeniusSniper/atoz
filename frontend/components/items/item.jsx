@@ -11,14 +11,18 @@ class Item extends React.Component{
         if(!item) return null;
         return(
             <div className='eachItem'>
-                <h1>{item.item_name}</h1>
-                <br />
-                <img src={`${item.image_url}`} alt="imgs" />
-                <br />
-                <div>
-                    <p>item price: {item.item_price}</p>
-                    <p>numbers of item left: {item.num_of_item_left}</p>
+                <div className='leftSession'>
+                    <img src={`${item.image_url}`} alt="imgs" />
+                    <br />
+                </div>
+                <div className='midSession'>
+                    <h1>{item.item_name}</h1>
+                    <br />
                     <p>descrption</p>
+                </div>
+                <div className='rightSession'>
+                    <p>${item.item_price}</p>
+                    <p>numbers of item left: {item.num_of_item_left}</p>
                 </div>
             </div>
         )

@@ -79,7 +79,7 @@ class SessionForm extends React.Component {
     }
     return (
       <div className="login-form-container">
-        <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="atoz" className='logoNav'/></Link>
+        <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo_black.png" alt="atoz" className='logoNav'/></Link>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           {this.renderErrors()}
           <div className="login-form">
