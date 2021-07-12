@@ -12,7 +12,8 @@ class Item extends React.Component{
         return(
             <div className='eachItem'>
                 <div className='leftSession'>
-                    <img src={`${item.image_url}`} alt="imgs" />
+                    ArrayOfPicture
+                    <img src={`${item.image_url[0]}`} alt="imgs" />
                     <br />
                 </div>
                 <div className='midSession'>

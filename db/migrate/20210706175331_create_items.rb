@@ -4,7 +4,8 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :item_name, null: false
       t.integer :item_price, null: false
       t.integer :num_of_item_left, null: false
-      t.string :image_url, null: false
+      t.text : :image_url, array: true, default: []
+      t.string :descrption, null: false
 
       t.timestamps
     end

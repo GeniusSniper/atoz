@@ -33,3 +33,23 @@
         grid-column: span 2 / auto;
     }    
 }
+
+.leftLeftSession {
+    border: 2px solid black;
+    padding: 5%;
+}
+
+.leftSession {
+    border: 2px solid black;
+    padding: 5%;
+}
+
+.midSession {
+    padding: 12.5% 10% 12.5%;
+    border: 2px solid black;
+}
+
+.rightSession {
+    padding: 5%;
+    border: 2px solid black;
+}
