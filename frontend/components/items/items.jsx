@@ -15,10 +15,9 @@ class Items extends React.Component{
             </ul>
         )
         return(
-            <>
-                <br />
+            <div className='mainPageSession'>
                 {allItem}
-            </>
+            </div>
         )
     }
 };
