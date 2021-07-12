@@ -40,7 +40,6 @@ class SessionForm extends React.Component {
   renderErrors() {
     return(
       <>
-      <br />
       <ul>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`} className='errorMsg'>
@@ -48,7 +47,6 @@ class SessionForm extends React.Component {
           </li>
         ))}
       </ul>
-      <br />
       </>
     );
   }
@@ -60,12 +58,16 @@ class SessionForm extends React.Component {
       sign_up_form = () => (
           <>
               <label>Email:
+                  <br />
                   <input type="email" value={this.state.email} onChange={this.update('email')} className="login-input" placeholder='email'/>
               </label>
               <br/>
+              <br />
               <label>Address:
+                  <br />
                   <input type="text" value={this.state.address} onChange={this.update('address')} className="login-input" placeholder='address'/>
               </label>
+              <br /><br />
           </>
       )
     } else {
@@ -77,18 +79,22 @@ class SessionForm extends React.Component {
     }
     return (
       <div className="login-form-container">
-        <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="atoz" className='logo'/></Link>
+        <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="atoz" className='logoNav'/></Link>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           {this.renderErrors()}
           <div className="login-form">
             <label>Username:
+              <br />
               <input type="text" value={this.state.username} onChange={this.update('username')} className="login-input" placeholder='username'/>
             </label>
+            <br />
             <br/>
             <label>Password: 
+              <br />
               <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='password'/>
             </label>
             <br/>
+            <br />
             {sign_up_form()}
             <br />
             <button className="session-submit" type="submit">{this.props.msg}</button>
