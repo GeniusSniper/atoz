@@ -19,7 +19,7 @@ class Item extends React.Component{
                     <div className='itemimgs'>
                         {itemimgs}
                     </div>
-                    <img src={`${item.image_url[0]}`} alt="imgs" className='img'/>
+                    <img src={`${item.image_url[0]}`} alt="imgs" className='eachImgPit'/>
                     <br />
                 </div>
                 <div className='midSession'>
@@ -30,7 +30,7 @@ class Item extends React.Component{
                 <div className='rightSession'>
                     <p>${item.item_price}</p>
                     <p>numbers of item left: {item.num_of_item_left}</p>
-                    <button>Purchase</button>
+                    <button className='purchaseButton'>Purchase</button>
                 </div>
             </div>
         )

@@ -17,8 +17,16 @@ const Greeting = ({ currentUser, logout }) => {
   return (
   <div className='nav-bar'>
     <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="AtoZ" className='logo'/></Link>
-    <input type="text" placeholder='search bar' className='searchBar'/>
-    {currentUser ? welcoming() : navbar()}
+    <div className='searchTool'>
+      <input type="text" placeholder='search bar' className='searchBar'/>
+      <button className='searchButton'><img src="" alt="search" /></button>
+    </div>
+    <div>
+      {currentUser ? welcoming() : navbar()}
+      <div>
+        {/* <button>Cart</button> */}
+      </div>
+    </div>
   </div>)
 
   // return currentUser ? welcoming() : navbar();
