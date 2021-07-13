@@ -66,6 +66,9 @@
 .rightSession {
     padding: 2.5%;
     border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 .itemimgs {

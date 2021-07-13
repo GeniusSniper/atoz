@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .nav-bar {
     display: flex;
+    flex-direction: row;
+    position: static;
     padding-top: 1em;
     justify-content: space-between;
     padding-left: 5px;
@@ -67,11 +69,11 @@
     text-align: center;
 }
 
-.login{
+.loginButton{
     display: block;
     border-radius: 25px;
     color: black;
-    margin-right: 2em;
+    // margin-right: 2em;
     text-decoration: none;
     background-color: orange;
     justify-content: center;

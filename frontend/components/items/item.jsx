@@ -2,6 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Item extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            i: 0
+        }
+    }
+
     componentDidMount(){
         this.props.needItem(this.props.match.params.itemId);
     }
@@ -9,9 +16,8 @@ class Item extends React.Component{
     render(){
         const item = this.props.item;
         if(!item) return null;
-        // this.i = 0;
         const itemimgs = item.image_url.map((img, j) => (
-            <img src={img} alt="broke" key={img} className='itemimg' />
+            <img src={img} alt="broke" key={img} className='itemimg' onMouseOver={() => this.setState({i: j})}/>
         ))
         return(
             <div className='eachItem'>
@@ -19,7 +25,7 @@ class Item extends React.Component{
                     <div className='itemimgs'>
                         {itemimgs}
                     </div>
-                    <img src={`${item.image_url[0]}`} alt="imgs" className='eachImgPit'/>
+                    <img src={`${item.image_url[this.state.i]}`} alt="imgs" className='eachImgPit'/>
                     <br />
                 </div>
                 <div className='midSession'>
@@ -30,7 +36,8 @@ class Item extends React.Component{
                 <div className='rightSession'>
                     <p>${item.item_price}</p>
                     <p>numbers of item left: {item.num_of_item_left}</p>
-                    <button className='purchaseButton'>Purchase</button>
+                    <button className='addCartButton'>Add to Cart</button>
+                    <button className='purchaseButton'>Buy Now</button>
                 </div>
             </div>
         )

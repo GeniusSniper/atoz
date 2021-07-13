@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, logout }) => {
   const navbar = () => (
     <div className='login-bar'>
-      <Link to="/login" className='login'>You havn't login yet Click Here</Link>
+      <Link to="/login" className='loginButton'>You havn't login yet Click Here</Link>
     </div>
   );
   const welcoming = () => (
@@ -21,10 +21,10 @@ const Greeting = ({ currentUser, logout }) => {
       <input type="text" placeholder='search bar' className='searchBar'/>
       <button className='searchButton'><img src="" alt="search" /></button>
     </div>
-    <div>
+    <div className='navEnd'>
       {currentUser ? welcoming() : navbar()}
-      <div>
-        {/* <button>Cart</button> */}
+      <div className='navCartButton'>
+        <button >Cart</button>
       </div>
     </div>
   </div>)
