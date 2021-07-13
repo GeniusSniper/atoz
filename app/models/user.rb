@@ -21,6 +21,8 @@ class User < ApplicationRecord
     validates :address, length: { minimum: 1, message: 'address can not be blank' }, allow_nil: true
   
     after_initialize :ensure_session_token # a user must have a session token 
+    
+    has_many :reviews, foreign_key: :user_id, class_name: :Review
   
     def self.find_by_credentials(username, password) # finding the user by username and password 
       user = User.find_by(username: username)
