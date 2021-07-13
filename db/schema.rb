@@ -40,7 +40,8 @@ ActiveRecord::Schema.define(version: 2021_07_08_180004) do
     t.string "item_name", null: false
     t.integer "item_price", null: false
     t.integer "num_of_item_left", null: false
-    t.string "image_url", null: false
+    t.string "descrption", null: false
+    t.text "image_url", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_name"], name: "index_items_on_item_name"

@@ -9,17 +9,23 @@ class Item extends React.Component{
     render(){
         const item = this.props.item;
         if(!item) return null;
+        // this.i = 0;
+        const itemimgs = item.image_url.map((img, j) => (
+            <img src={img} alt="broke" key={img} className='itemimg' />
+        ))
         return(
             <div className='eachItem'>
                 <div className='leftSession'>
-                    ArrayOfPicture
-                    <img src={`${item.image_url[0]}`} alt="imgs" />
+                    <div className='itemimgs'>
+                        {itemimgs}
+                    </div>
+                    <img src={`${item.image_url[0]}`} alt="imgs" className='img'/>
                     <br />
                 </div>
                 <div className='midSession'>
-                    <h1>{item.item_name}</h1>
+                    <h1 className='itemTitle'>{item.item_name}</h1>
                     <br />
-                    <p>descrption</p>
+                    <p className='itemDescrption'>{item.descrption}</p>
                 </div>
                 <div className='rightSession'>
                     <p>${item.item_price}</p>
