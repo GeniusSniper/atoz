@@ -7,6 +7,10 @@ const Greeting = ({ currentUser, logout }) => {
       <span className="header-name">Welcome to my page, Sign in</span>
       <div className='dropdown-greetingButton'>
         <Link to="/login" className='header-button'><button className='loginButton'>Log in</button></Link>
+        <br />
+        <span className='signUP'>New customer?
+          <Link to="/signup" className='signupButton'>Start here.</Link>
+        </span>
       </div>
     </div>
   );
