@@ -8,7 +8,7 @@ const mst = ({ errors }) => ({
   errors: errors.session,
   formType: 'login',
   msg: 'Continue',
-  navLink: <Link to="/signup">Create your Atoz account</Link>,
+  navLink: <Link to="/signup" className='redirectButton'><button className='formTypeLink'>Create your Atoz account</button></Link>,
   formTypeMsg: 'New to Atoz?'
 })
 
