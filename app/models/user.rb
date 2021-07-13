@@ -7,7 +7,7 @@ class User < ApplicationRecord
     validates :username, uniqueness: true
     validates :password, length: { minimum: 6 }, allow_nil: true
     validates :email, length: { minimum: 1, message: 'email can not be blank' }, allow_nil: true
-    validates :address, length: { minimum: 1, message: 'email can not be blank' }, allow_nil: true
+    validates :address, length: { minimum: 1, message: 'address can not be blank' }, allow_nil: true
   
     after_initialize :ensure_session_token # a user must have a session token 
   

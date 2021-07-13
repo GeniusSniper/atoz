@@ -23,13 +23,14 @@ class Item extends React.Component{
                     <br />
                 </div>
                 <div className='midSession'>
-                    <h1 className='itemTitle'>{item.item_name}</h1>
+                    <h1 className='eachItemTitle'>{item.item_name}</h1>
                     <br />
                     <p className='itemDescrption'>{item.descrption}</p>
                 </div>
                 <div className='rightSession'>
                     <p>${item.item_price}</p>
                     <p>numbers of item left: {item.num_of_item_left}</p>
+                    <button>Purchase</button>
                 </div>
             </div>
         )
