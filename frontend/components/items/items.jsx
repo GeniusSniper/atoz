@@ -24,9 +24,14 @@ class Items extends React.Component{
             </ul>
         )
         return(
-            <div className='mainPageSession'>
-                {allItem}
-            </div>
+            <>
+                <div className='mainPageImgBox'>
+                    <img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/gifts-5-1316929.jpg" alt="main page" className='mainPageImg'/>
+                </div>
+                <div className='mainPageSession'>
+                    {allItem}
+                </div>
+            </>
         )
     }
 };

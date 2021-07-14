@@ -6,7 +6,7 @@
     display: block;
     // justify-content: space-between;
     // padding: 5%;
-    margin: 5% 12.5% 0;
+    margin: 5% 10% 0;
     // border: 2px solid black;
     line-height: 40px;
 }
@@ -83,8 +83,10 @@
 
 .midSessionBox {
     display: block;
-    height: 600px;
-    width: 919px;
+    min-width: 200px;
+    min-height: 400px;
+    height: 400px;
+    width: 600px;
 }
 
 .midSessionFlex {
