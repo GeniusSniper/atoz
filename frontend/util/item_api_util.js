@@ -9,3 +9,11 @@ export const needItem = itemId => (
         url: `api/items/${itemId}`
     })
 );
+
+export const createReview = review => (
+    $.ajax({
+      method: 'POST',
+      url: 'api/reviews',
+      data: { review }
+    })
+);
