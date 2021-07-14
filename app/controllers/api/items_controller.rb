@@ -1,6 +1,6 @@
 class Api::ItemsController < ApplicationController
     def index
-        @items = Item.all
+        @items = Item.with_attached_photo.all
     end
 
     def show

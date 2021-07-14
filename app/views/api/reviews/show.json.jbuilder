@@ -2,7 +2,7 @@ json.review do
   json.partial! '/api/reviews/review', review: @review
 end
 
-json.author do
+json.user do
   json.partial! '/api/users/user', user: @review.user
 end
 

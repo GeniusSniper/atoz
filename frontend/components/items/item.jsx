@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReviewFormContainer from '../review/review_form_container';
 
 class Item extends React.Component{
     constructor(props){
@@ -15,7 +16,7 @@ class Item extends React.Component{
 
     render(){
         const item = this.props.item;
-        if(!item) return null;
+        if(!item.id) return null;
         const itemimgs = item.image_url.map((img, j) => (
             <div className='itemImgsGrid'  key={img}>
                 <div className='itemImgBlock'>
@@ -23,6 +24,11 @@ class Item extends React.Component{
                 </div>
             </div>
         ))
+        // debugger
+        console.log(this.props.reviews)
+        // const allReviews = this.props.reviews.map(review => (
+        //     <p>{review}</p>
+        // ));
         return(
             <div className='eachItem'>
                 <div className='eachItemFlex'>
@@ -55,6 +61,8 @@ class Item extends React.Component{
                         </div>
                     </div>
                 </div>
+                <ReviewFormContainer />
+                {/* {allReviews} */}
             </div>
         )
     }
