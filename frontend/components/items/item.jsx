@@ -35,15 +35,24 @@ class Item extends React.Component{
                         </div>
                     </div>
                     <div className='midSession'>
-                        <h1 className='eachItemTitle'>{item.item_name}</h1>
-                        <br />
-                        <p className='itemDescrption'>{item.descrption}</p>
+                        <div className='midSessionBox'>
+                            <div className='midSessionFlex'>
+                                <h1 className='eachItemTitle'>{item.item_name}</h1>
+                                <p className='eachItemPrice'>${item.item_price}</p>
+                                <p className='itemDescrption'>{item.descrption}</p>
+                            </div>
+                        </div>
                     </div>
                     <div className='rightSession'>
-                        <p>${item.item_price}</p>
-                        <p>numbers of item left: {item.num_of_item_left}</p>
-                        <button className='addCartButton'>Add to Cart</button>
-                        <button className='purchaseButton'>Buy Now</button>
+                        <div className='rightSessionBox'>
+                            <div className='rightSessionFlex'>
+                                <p className='eachItemPrice'>${item.item_price}</p>
+                                <p>numbers of item left: {item.num_of_item_left}</p>
+                                <button className='addCartButton'>Add to Cart</button>
+                                <br />
+                                <button className='purchaseButton'>Buy Now</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
