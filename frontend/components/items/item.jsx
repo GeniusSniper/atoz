@@ -25,10 +25,10 @@ class Item extends React.Component{
             </div>
         ))
         // debugger
-        console.log(this.props.reviews)
-        // const allReviews = this.props.reviews.map(review => (
-        //     <p>{review}</p>
-        // ));
+        // console.log(Object.values(this.props.reviews))
+        const allReviews = this.props.reviews.map(review => (
+            <p>{review.body}</p>
+        ));
         return(
             <div className='eachItem'>
                 <div className='eachItemFlex'>
@@ -62,7 +62,7 @@ class Item extends React.Component{
                     </div>
                 </div>
                 <ReviewFormContainer />
-                {/* {allReviews} */}
+                {allReviews}
             </div>
         )
     }
