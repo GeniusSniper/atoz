@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import { deleteReview } from '../../actions/items_action';
 import Review from './review';
 
-const mst = ({entities: { users }}, { review }) => ({
-    user: users[review.user_id]
+const mst = ( state, { review }) => ({
+    user: state.entities.users[review.user_id],
+    currentUserId: state.session.id
 });
 
 const mdt = dispatch => ({

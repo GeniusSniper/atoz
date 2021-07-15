@@ -31,12 +31,16 @@ export const deleteItemReview = reviewId => ({
 export const allItems = () => dispatch => (
     APIUtil.allItems().then(items => (
         dispatch(receiveAllItems(items))
+    ), err => (
+      dispatch(receiveErrors(err.responseJSON))
     ))
 );
 
 export const needItem = itemId => dispatch => (
     APIUtil.needItem(itemId).then(item => (
         dispatch(receiveItem(item))
+    ), err => (
+      dispatch(receiveErrors(err.responseJSON))
     ))
 );
 
@@ -49,6 +53,8 @@ export const needItem = itemId => dispatch => (
 export const createReview = review => dispatch => (
     APIUtil.createReview(review).then(payload => (
     dispatch(receiveReivew(payload))
+  ), err => (
+    dispatch(receiveErrors(err.responseJSON))
   ))
 );
 
@@ -61,6 +67,8 @@ export const createReview = review => dispatch => (
 export const updateReview = review => dispatch => (
   APIUtil.updateReview(review).then(payload => (
     dispatch(receiveReivew(payload))
+  ), err => (
+    dispatch(receiveErrors(err.responseJSON))
   ))
 );
 

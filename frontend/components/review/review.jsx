@@ -1,8 +1,20 @@
 import React from 'react';
-// import EditReviewContainer from './edit_review_form_container';
 import { Link } from 'react-router-dom'
 
 export default props => {
+    let permission = () => null;
+    if(props.currentUserId === props.user.id) {
+        permission = () => (
+            <>
+                <div>
+                    <button onClick={() => props.deleteReview(props.review.id)}>delete</button>
+                </div>
+                <div>
+                    <Link to={`/items/${props.itemId}/${props.review.id}/edit`}><button>Edit review</button></Link>
+                </div>
+            </>
+        )
+    }
     return (
         <div>
             <div>
@@ -14,11 +26,7 @@ export default props => {
             <div>
                 {props.review.body}
             </div>
-            <div>
-                <button onClick={() => props.deleteReview(props.review.id)}>delete</button>
-            </div>
-            {/* <EditReviewContainer reviewId={props.review.id}/> */}
-            <Link to={`/items/${props.itemId}/${props.review.id}/edit`}><button>Edit review</button></Link>
+            <div>{permission()}</div>
         </div>
     )
 };
