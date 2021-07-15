@@ -6,6 +6,7 @@ import Signup_form_container from './session_form/signup_form_container';
 import Login_form_container from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+//the nav bar contains the login and sinup
 export default () => (
     <div className='header'>
         <Switch>

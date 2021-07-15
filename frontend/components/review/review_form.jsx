@@ -41,7 +41,7 @@ class ReviewForm extends React.Component {
         <div className='centeredForm'>
           <form onSubmit={this.handleSubmit}>
             <div className='reviewFormTitle'>
-              {this.props.formType}&nbsp;form
+              {this.props.formType}&nbsp;review
             </div>
             <div className='reviewFormRating'>
               <p>Rating</p>
@@ -62,7 +62,7 @@ class ReviewForm extends React.Component {
               </label>
             </div>
             <div className='reviewFormComment'>
-              <p>Comment</p>
+              <p>Review</p>
               <textarea cols="40" rows="15" value={this.state.body} onChange={this.update("body")} className='textarea' />
             </div>
             <button className='reviewFormButton'>{this.props.formType} review</button>
