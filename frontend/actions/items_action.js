@@ -52,11 +52,11 @@ export const createReview = review => dispatch => (
   ))
 );
 
-export const editReview = reviewId => dispatch => (
-  APIUtil.editReview(reviewId).then(payload => (
-    dispatch(receiveReivew(payload))
-  ))
-);
+// export const editReview = reviewId => dispatch => (
+//   APIUtil.editReview(reviewId).then(payload => (
+//     dispatch(receiveReivew(payload))
+//   ))
+// );
 
 export const updateReview = review => dispatch => (
   APIUtil.updateReview(review).then(payload => (

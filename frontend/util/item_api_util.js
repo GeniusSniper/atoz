@@ -24,11 +24,11 @@ export const createReview = review => (
     })
 );
 
-export const editReview = reviewId => (
-    $.ajax({
-        url: `api/reviews/${reviewId}/edit`
-    })
-)
+// export const editReview = reviewId => (
+//     $.ajax({
+//         url: `api/reviews/${reviewId}/edit`
+//     })
+// )
 
 export const updateReview = review => (
     $.ajax({

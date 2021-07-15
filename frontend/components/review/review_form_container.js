@@ -7,7 +7,8 @@ const mst = state => ({
   review: {
     raing: 5,
     body: ''
-  }
+  },
+  formType: 'create'
 })
 
 const mdt = dispatch => ({

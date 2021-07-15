@@ -16,9 +16,7 @@ export default props => {
             <div>
                 <button onClick={() => props.deleteReview(props.review.id)}>delete</button>
             </div>
-            {/* <div>
-                
-            </div> */}
+            <EditReviewContainer reviewId={props.review.id}/>
         </div>
     )
 };

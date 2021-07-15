@@ -11,19 +11,19 @@ class Api::ReviewsController < ApplicationController
     end
   end
 
-  def edit
-    @review = current_user.reviews.find_by(id: params[:id])
-    if @review
-      render json: ['worked'], status: 200
-    else
-      render json: @review, status: :unprocessable_entity
-    end
-  end
+  # def edit
+  #   @review = current_user.reviews.find_by(id: params[:id])
+  #   if @review
+  #     render json: ['worked'], status: 200
+  #   else
+  #     render json: @review, status: :unprocessable_entity
+  #   end
+  # end
 
   def update
     @review = current_user.reviews.find_by(id: params[:id])
     if @review && @review.update(review_params)
-      render json: ['updated'], status: 200
+      render :show
     else
       render json: @review.errors.full_messages, status: 422
     end
