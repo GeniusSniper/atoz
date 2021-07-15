@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { allItems } from '../../actions/items_action';
+import { allItems, deleteItemReview } from '../../actions/items_action';
 import items from './items';
 
 const mst = ({ entities }) => ({
@@ -7,7 +7,7 @@ const mst = ({ entities }) => ({
 });
 
 const mdt = dispatch => ({
-    allItems: () => dispatch(allItems()),
+    allItems: () => dispatch(allItems())
 });
 
 export default connect(mst,mdt)(items);

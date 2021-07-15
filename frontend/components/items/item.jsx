@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReviewFormContainer from '../review/review_form_container';
+import Review from '../review/review';
 
 class Item extends React.Component{
     constructor(props){
@@ -26,9 +27,9 @@ class Item extends React.Component{
         ))
         // debugger
         // console.log(Object.values(this.props.reviews))
-        const allReviews = this.props.reviews.map(review => (
-            <p>{review.body}</p>
-        ));
+        // const allReviews = this.props.reviews.map(review => (
+        //     <p>{review.body}</p>
+        // ));
         return(
             <div className='eachItem'>
                 <div className='eachItemFlex'>
@@ -62,7 +63,7 @@ class Item extends React.Component{
                     </div>
                 </div>
                 <ReviewFormContainer />
-                {allReviews}
+                <Review reviews={this.props.reviews} deleteReview={this.props.deleteReview} item={item}/>
             </div>
         )
     }

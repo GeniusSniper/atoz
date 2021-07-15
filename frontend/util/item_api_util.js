@@ -10,6 +10,12 @@ export const needItem = itemId => (
     })
 );
 
+// export const showReview = reviewId => (
+//     $.ajax({
+//         url: `api/reviews/${reviewId}`
+//     })
+// )
+
 export const createReview = review => (
     $.ajax({
       method: 'POST',
@@ -17,3 +23,24 @@ export const createReview = review => (
       data: { review }
     })
 );
+
+export const editReview = reviewId => (
+    $.ajax({
+        url: `api/reviews/${reviewId}/edit`
+    })
+)
+
+export const updateReview = review => (
+    $.ajax({
+        method: 'patch',
+        url: `api/reviews/${review.id}`,
+        data: { review }
+    })
+)
+
+export const delteReview = reviewId => (
+    $.ajax({
+        method: 'delete',
+        url: `api/reviews/${reviewId}`
+    })
+)

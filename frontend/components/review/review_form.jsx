@@ -4,10 +4,11 @@ import { withRouter } from 'react-router-dom';
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      rating: 5,
-      body: ''
-    };
+    // this.state = {
+    //   rating: 5,
+    //   body: ''
+    // };
+    this.state = this.props.review;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToItemShow = this.navigateToItemShow.bind(this);
   }
