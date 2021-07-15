@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { deleteItemReview } from '../../actions/items_action';
+import { deleteReview } from '../../actions/items_action';
 import Review from './review';
 
 const mst = ({entities: { users }}, { review }) => ({
@@ -7,7 +7,7 @@ const mst = ({entities: { users }}, { review }) => ({
 });
 
 const mdt = dispatch => ({
-    deleteReview: reviewId => dispatch(deleteItemReview(reviewId))
+    deleteReview: reviewId => dispatch(deleteReview(reviewId))
 });
 
 
