@@ -16,7 +16,7 @@ class Api::ReviewsController < ApplicationController
     if @review
       render json: ['worked'], status: 200
     else
-      render json: @review, status :unprocessable_entity
+      render json: @review, status: :unprocessable_entity
     end
   end
 
@@ -29,7 +29,7 @@ class Api::ReviewsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @review = current_user.reviews.find_by(id: params[:id])
     if @review && @review.destroy
       render json: ['deleted'], status: 200

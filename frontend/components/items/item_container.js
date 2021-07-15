@@ -15,7 +15,7 @@ const mst = (state, props) => {
 }
 const mdt = dispatch => ({
     needItem: itemId => dispatch(needItem(itemId)),
-    deleteReview: reviewId => dispatch(deleteItemReview(reviewId))
+    // deleteReview: reviewId => dispatch(deleteItemReview(reviewId))
 });
 
 export default connect(mst,mdt)(item);

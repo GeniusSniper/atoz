@@ -1,4 +1,4 @@
-import { RECEIVE_ITEM, RECEIVE_REVIEW } from '../actions/items_action';
+import { DELETE_REVIEW, RECEIVE_ITEM, RECEIVE_REVIEW } from '../actions/items_action';
 import { RECEIVE_CURRENT_USER } from '../actions/session_action';
 
 const usersReducer = (state = {}, action) => {
