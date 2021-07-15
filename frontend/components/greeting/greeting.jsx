@@ -28,7 +28,7 @@ const Greeting = ({ currentUser, logout }) => {
     <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="AtoZ" className='logo'/></Link>
     <div className='searchTool'>
       <input type="text" placeholder='search bar' className='searchBar'/>
-      <button className='searchButton'><img src="" alt="search" className='searchIcon' /></button>
+      <button className='searchButton'><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/seach_icon_by_skydragon.png" alt="search" className='searchIcon' /></button>
     </div>
     <div className='navEnd'>
       {currentUser ? welcoming() : navbar()}

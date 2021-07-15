@@ -62,8 +62,16 @@ class Item extends React.Component{
                         </div>
                     </div>
                 </div>
-                <Link to={`/items/${item.id}/review/new`}><button>Write a customer review</button></Link>
-                {allReviews}
+                <div className='reviewSession'>
+                    <div className='requstingReview'>
+                        <h1 className='reviewThisProduct'>Review this product</h1>
+                        <p className='shareYourThoughts'>Share your thoughts with other customers</p>
+                        <Link to={`/items/${item.id}/review/new`} className='creatingReview'><button className='createReviewButton'>Write a customer review</button></Link>
+                    </div>
+                    <div className='allReviews'>
+                        {allReviews}
+                    </div>
+                </div>
             </div>
         )
     }

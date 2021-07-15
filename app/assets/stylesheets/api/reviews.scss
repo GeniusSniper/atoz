@@ -1,3 +1,26 @@
 // Place all the styles related to the api/reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.reviewSession {
+    display: flex;
+    flex-direction: row;
+    line-height: 40px;
+    font-size: 24px;
+}
+
+.requstingReview {
+    display: block;
+    padding-right: 10%;
+}
+
+.reviewThisProduct {
+    font-size: 40;
+    font-weight: bold;
+}
+
+.createReviewButton {
+    font-size: 24px;
+    padding: 1% 5% 1%;
+    border-radius: 15px;
+}
