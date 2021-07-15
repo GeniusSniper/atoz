@@ -4,7 +4,8 @@ import { updateReview } from '../../actions/items_action';
 import ReviewForm from './review_form';
 
 const mst = (state, props) => ({
-  review: state.entities.reviews[props.reviewId],
+  // review: state.entities.reviews[props.reviewId],
+  review: state.entities.reviews[props.match.params.reviewId],
   formType: 'edit'
 });
 

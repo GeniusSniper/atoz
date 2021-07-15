@@ -34,7 +34,7 @@ class Api::ReviewsController < ApplicationController
     if @review && @review.destroy
       render json: ['deleted'], status: 200
     else
-      render json: @review.errors.full_messages, status: 422
+      render json: ['nope'], status: 422
     end
   end
 

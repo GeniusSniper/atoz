@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReviewFormContainer from '../review/review_form_container';
 import ItemReviewsContainer from '../review/item_reviews_container';
 
 class Item extends React.Component{
@@ -28,7 +27,7 @@ class Item extends React.Component{
         const allReviews = this.props.reviews.map(review => {
             if(!review) return null;
             return(
-            <ItemReviewsContainer review={review} key={review.id}/>
+            <ItemReviewsContainer review={review} key={Math.random()} itemId={item.id}/>
         )});
 
         return(
@@ -63,7 +62,7 @@ class Item extends React.Component{
                         </div>
                     </div>
                 </div>
-                <ReviewFormContainer />
+                <Link to={`/items/${item.id}/review/new`}><button>Write a customer review</button></Link>
                 {allReviews}
             </div>
         )

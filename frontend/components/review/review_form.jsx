@@ -29,6 +29,7 @@ class ReviewForm extends React.Component {
       this.props.updateReview(review);
     }
     this.navigateToItemShow();
+    // this.setState({rating: 5, body: ''});
   }
 
   update(property) {
