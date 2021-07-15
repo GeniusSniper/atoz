@@ -29,7 +29,6 @@ class ReviewForm extends React.Component {
       this.props.updateReview(review);
     }
     this.navigateToItemShow();
-    // this.setState({rating: 5, body: ''});
   }
 
   update(property) {
@@ -38,30 +37,38 @@ class ReviewForm extends React.Component {
 
   render() {
     return (
-      <div className="review-form">
-        <form onSubmit={this.handleSubmit}>
-          <label>Rating</label>
-          <br/>
-          <input
-            type="number"
-            value={this.state.rating}
-            onChange={this.update("rating")}
-          />
-          <br/>
-
-          <label>Comment</label>
-          <br/>
-
-          <textarea
-            cols="30"
-            rows="10"
-            value={this.state.body}
-            onChange={this.update("body")}
-          />
-          <br/>
-          <input type="submit" />
-        </form>
-        <button onClick={this.navigateToItemShow}>Cancel</button>
+      <div className="reviewForm">
+        <div className='centeredForm'>
+          <form onSubmit={this.handleSubmit}>
+            <div className='reviewFormTitle'>
+              {this.props.formType}&nbsp;form
+            </div>
+            <div className='reviewFormRating'>
+              <p>Rating</p>
+              <label>1
+                <input type="radio" value={1} onClick={this.update('rating')} />
+              </label>
+              <label>2
+                <input type="radio" value={2} onClick={this.update('rating')} />
+              </label>
+              <label>3
+                <input type="radio" value={3} onClick={this.update('rating')} />
+              </label>
+              <label>4
+                <input type="radio" value={4} onClick={this.update('rating')} />
+              </label>
+              <label>5
+                <input type="radio" value={5} onClick={this.update('rating')} />
+              </label>
+            </div>
+            <div className='reviewFormComment'>
+              <p>Comment</p>
+              <textarea cols="40" rows="15" value={this.state.body} onChange={this.update("body")} className='textarea' />
+            </div>
+            <button className='reviewFormButton'>{this.props.formType} review</button>
+          </form>
+          <button onClick={this.navigateToItemShow}>Cancel</button>
+        </div>
       </div>
     );
  }
