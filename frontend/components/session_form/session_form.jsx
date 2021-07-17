@@ -103,7 +103,6 @@ class SessionForm extends React.Component {
         {this.props.navLink}
         <br />
         {demo_user()}
-        {/* <p className='something'>something</p> */}
       </div>
       </div>
     );

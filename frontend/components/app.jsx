@@ -12,10 +12,13 @@ import EditFormContainer from './review/edit_review_form_container';
 const App = () => (
     <div className='mainPage'>
         <Nav/>
-        <Route exact path='/' component={Items_container}/>
-        <Route exact path='/items/:itemId' component={Item_container}/>
-        <ProtectedRoute exact path='/items/:itemId/review/new' component={ReviewFormContainer}/>
-        <ProtectedRoute exact path='/items/:itemId/:reviewId/edit' component={EditFormContainer}/>
+        <Switch>
+            <Route exact path='/' component={Items_container}/>
+            <Route exact path='/items/:itemId' component={Item_container}/>
+            <ProtectedRoute exact path='/items/:itemId/review/new' component={ReviewFormContainer}/>
+            <ProtectedRoute exact path='/items/:itemId/:reviewId/edit' component={EditFormContainer}/>
+            {/* //404 routes */}
+        </Switch>
     </div>
 );
 
