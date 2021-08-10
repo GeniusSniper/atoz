@@ -1,7 +1,3 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// @media screen and (max-width: 800px){
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -10,24 +6,9 @@
     min-width: 600px;
     width: 100%;
     justify-content: space-between;
-    padding-left: 5px;
-    padding-right: 5px;
-    // position: fixed;
     border-bottom: 2px solid black;
     background-color: rgb(0, 10, 27);
 }
-// }
-
-.login-form-container {
-    margin-top: 5%;
-    border: 2px solid black;
-    height: 400px;
-    width: 400px;
-    padding: 4em;
-}
-
-// .login-form-box {
-// }
 
 .session-submit {
     background-color: orange;
@@ -42,28 +23,6 @@
 *{
     font-family: 'Times New Roman', Times, serif;
 }
-
-// .something {
-//     overflow: hidden; /* Ensures the content is not revealed until the animation */
-//     border-right: .15em solid orange; /* The typwriter cursor */
-//     white-space: nowrap; /* Keeps the content on a single line */
-//     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-//     animation: 
-//       typing 3.5s steps(40, end),
-//       blink-caret .75s step-end infinite;
-//   }
-  
-//   /* The typing effect */
-//   @keyframes typing {
-//     from { width: 0 }
-//     to { width: 100% }
-//   }
-  
-//   /* The typewriter cursor effect */
-//   @keyframes blink-caret {
-//     from, to { border-color: transparent }
-//     50% { border-color: orange; }
-//   }
 
 .formTypeMsg {
     text-align: center;
@@ -97,19 +56,10 @@
     margin-bottom: 1%;
 }
 
-// .errorMsgs{
-//     margin: 0 200px 0;
-// }
-
 .errorMsg {
     color: red;
     white-space: nowrap;
 }
-
-// .header-tag{
-//     display: flex;
-//     flex-direction: row;
-// }
 
 .header-button{
     height: 25px;
@@ -124,23 +74,6 @@
     color: rgb(255, 255, 255);
 }
 
-.logoNav {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 40px;
-    width: 105.14px;
-}
-
-.theBoxOutside{
-    // max-width: 580;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-49%, -49%);
-}
-
 .signUP{
     font-size: 11px;
 }
@@ -148,4 +81,20 @@
 .signupButton {
     text-decoration: none;
     color: blue;
+}
+
+.logoNav {
+    height: 40px;
+}
+
+.theBoxOutside {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.theBoxInside {
+    display: grid;
+    place-items: center;
 }
