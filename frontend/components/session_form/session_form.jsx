@@ -82,32 +82,34 @@ class SessionForm extends React.Component {
     return (
       <div className='theBoxOutside'>
         <div className='theBoxInside'>
-          <div>
-            <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo_black.png" alt="atoz" className='logoNav'/></Link>
-          </div>
-          <div className="login-form-container">
-            <form onSubmit={this.handleSubmit} className="login-form-box">
-              {this.renderErrors()}
-              <label>Username:
-                <br />
-                <input type="text" value={this.state.username} onChange={this.update('username')} className="login-input" placeholder='username'/>
-              </label>
-              <br />
-              <br/>
-              <label>Password: 
-                <br />
-                <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='password'/>
-              </label>
-              {sign_up_form()}
-              <button className="session-submit" type="submit">{this.props.msg}</button>
-            </form>
-            <br />
-            <p className='formTypeMsg'>{this.props.formTypeMsg}</p>
-            <div>
-              {this.props.navLink}
+          <div className='theInsideBox'>
+            <div className='sessionlogo'>
+              <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo_black.png" alt="atoz" className='logoNav'/></Link>
             </div>
-            <br />
-            {demo_user()}
+            <div className="login-form-container">
+              <form onSubmit={this.handleSubmit} className="login-form-box">
+                {this.renderErrors()}
+                <label>Username:
+                  <br />
+                  <input type="text" value={this.state.username} onChange={this.update('username')} className="login-input" placeholder='username'/>
+                </label>
+                <br />
+                <br/>
+                <label>Password: 
+                  <br />
+                  <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='password'/>
+                </label>
+                {sign_up_form()}
+                <button className="session-submit" type="submit">{this.props.msg}</button>
+              </form>
+              <br />
+              <p className='formTypeMsg'>{this.props.formTypeMsg}</p>
+              <div>
+                {this.props.navLink}
+              </div>
+              <br />
+              {demo_user()}
+            </div>
           </div>
         </div>
       </div>
