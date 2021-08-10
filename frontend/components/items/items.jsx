@@ -25,8 +25,10 @@ class Items extends React.Component{
         )
         return(
             <>
-                <div className='mainPageImgBox'>
-                    <img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/gifts-5-1316929.jpg" alt="main page" className='mainPageImg'/>
+                <div className='zIndex'>
+                    <div className='mainPageImgBox'>
+                        <img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/gifts-5-1316929.jpg" alt="main page" className='mainPageImg'/>
+                    </div>
                 </div>
                 <div className='mainPageSession'>
                     {allItem}
