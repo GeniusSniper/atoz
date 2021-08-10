@@ -1,39 +1,43 @@
 .mainPageSession {
-    margin-top: 20%;
+    margin-top: 15%;
+    width: 100%;
 }
-.grid-items {
-    min-width: 600px;
-    max-width: 1239px;
+.allItems {
     margin: 0 auto;
     overflow: hidden;
+}
+.grid-items {
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 10px 0;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    grid-template-columns: repeat(auto-fit, minmax(33.33333%, 30%));
 }
 .gridItem {
-    max-width: 1239px;
+    min-width: 33.33333%;
+    max-width: 400px;
+    height: 380px;
+    min-height: 380px;
     grid-row: span 1 / auto;
     grid-column: span 1 / auto;
-    height: 400px;
-    min-height: 400px;
-    padding: 10px;
 }
 .gridContent {
     background: white;
     height: 100%;
     position: relative;
     margin-bottom: 0;
-    margin-top: 0;
+    margin-top: 20px;
     overflow: hidden;
-    padding-top: 20px;
 }
 .gridImgBox {
     display: block;
     position: relative;
     flex-grow: 1;
     height: 275px;
-    margin-bottom: 44px;
-    padding: 0 20px;
+    margin: 0 20px 44px 20px;
 }
 .gridItemLink {
     height: 100%;
@@ -60,20 +64,23 @@
     font-size: 30px;
     margin: auto;
 }
-.zIndex {
-    display: block;
-    position: absolute;
-    z-index: -1;
-}
 .mainPageImgBox {
-    display: block;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-.mainPageImg {
+    display: flex;
+    justify-content: center;
+    position: absolute;
     overflow: hidden;
-    max-width: 1500px;
+    left: 50%;
+    transform: translate(-50%,0);
     min-width: 1000px;
     width: 100%;
+    max-width: 1500px;
+    z-index: -1;
+}
+
+.mainPageImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    z-index: -1;
 }
