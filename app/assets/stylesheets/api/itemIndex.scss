@@ -11,13 +11,13 @@
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    padding: 0 10px 0;
     display: grid;
-    gap: 1rem;
+    place-items: center;
+    row-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(33.33333%, 30%));
 }
 .gridItem {
-    min-width: 33.33333%;
+    min-width: 80%;
     max-width: 400px;
     height: 380px;
     min-height: 380px;
