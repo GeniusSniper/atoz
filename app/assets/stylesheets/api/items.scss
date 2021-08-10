@@ -17,15 +17,11 @@
 
 .midSession {
     display: block;
-    padding: 2.5%;
+    margin: 0 5%;
 }
 
 .midSessionBox {
     display: block;
-    min-width: 200px;
-    min-height: 400px;
-    height: 400px;
-    width: 600px;
 }
 
 .midSessionFlex {
@@ -41,8 +37,6 @@
 }
 
 .rightSessionBox {
-    height: 600px;
-    width: 100px;
     display: block;
 }
 
