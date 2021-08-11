@@ -9,10 +9,12 @@
 
 .eachItemFlex {
     display: flex;
+    width: 100%;
 }
 
 .leftSession {
     display: flex;
+    width: 100%;
 }
 
 .midSession {
@@ -85,7 +87,7 @@
 .eachItemMainImg {
     display: block;
     position: relative;
-    width: 600px;
+    width: 100%;
     height: 600px;
     overflow: hidden;
 }
