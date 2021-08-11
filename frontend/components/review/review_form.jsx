@@ -62,13 +62,16 @@ class ReviewForm extends React.Component {
               </label>
             </div>
             <div className='reviewFormComment'>
-              <p>Review</p>
-              <textarea cols="40" rows="15" value={this.state.body} onChange={this.update("body")} className='textarea' />
+              <p>Add a written review</p>
+              <textarea cols="40" rows="15" value={this.state.body} onChange={this.update("body")} className='textarea' placeholder='What did you like or dislike? What did you use this product for?'/>
             </div>
-            <button className='reviewFormButton'>{this.props.formType} review</button>
+            <div>
+              <button className='reviewFormButton'>{this.props.formType} review</button>
+            </div>
           </form>
-          
-          <button onClick={this.navigateToItemShow}>Cancel</button>
+          <div>
+            <button onClick={this.navigateToItemShow} className='cancelReviewButton'>Cancel</button>
+          </div>
         </div>
       </div>
     );
