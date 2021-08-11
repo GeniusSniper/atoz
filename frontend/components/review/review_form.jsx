@@ -44,21 +44,21 @@ class ReviewForm extends React.Component {
               {this.props.formType}&nbsp;review
             </div>
             <div className='reviewFormRating'>
-              <p>Rating</p>
+              <p>Overall rating</p>
               <label>1
-                <input type="radio" value={1} onClick={this.update('rating')} className='radioButton' />
+                <input type="radio" value={1} onClick={this.update('rating')} name='radioButton' />
               </label>
               <label>2
-                <input type="radio" value={2} onClick={this.update('rating')}  className='radioButton'/>
+                <input type="radio" value={2} onClick={this.update('rating')}  name='radioButton'/>
               </label>
               <label>3
-                <input type="radio" value={3} onClick={this.update('rating')}  className='radioButton'/>
+                <input type="radio" value={3} onClick={this.update('rating')}  name='radioButton'/>
               </label>
               <label>4
-                <input type="radio" value={4} onClick={this.update('rating')}  className='radioButton'/>
+                <input type="radio" value={4} onClick={this.update('rating')}  name='radioButton'/>
               </label>
               <label>5
-                <input type="radio" value={5} onClick={this.update('rating')}  className='radioButton'/>
+                <input type="radio" value={5} onClick={this.update('rating')}  name='radioButton'/>
               </label>
             </div>
             <div className='reviewFormComment'>
@@ -67,6 +67,7 @@ class ReviewForm extends React.Component {
             </div>
             <button className='reviewFormButton'>{this.props.formType} review</button>
           </form>
+          
           <button onClick={this.navigateToItemShow}>Cancel</button>
         </div>
       </div>
