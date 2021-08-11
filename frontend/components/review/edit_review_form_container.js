@@ -3,10 +3,11 @@ import { updateReview } from '../../actions/items_action';
 
 import ReviewForm from './review_form';
 
-const mst = (state, props) => ({
-  review: state.entities.reviews[props.reviewId],
+const mst = (state, props) => {
+  return ({
+  review: state.entities.reviews[props.match.params.reviewId],
   formType: 'edit'
-});
+})};
 
 const mdt = dispatch => ({
   // editReview: reviewId => dispatch(editReview(reviewId)),

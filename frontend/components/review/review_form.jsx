@@ -65,9 +65,7 @@ class ReviewForm extends React.Component {
               <p>Add a written review</p>
               <textarea cols="40" rows="15" value={this.state.body} onChange={this.update("body")} className='textarea' placeholder='What did you like or dislike? What did you use this product for?'/>
             </div>
-            <div>
-              <button className='reviewFormButton'>{this.props.formType} review</button>
-            </div>
+            <button className='reviewFormButton'>{this.props.formType} review</button>
           </form>
           <div>
             <button onClick={this.navigateToItemShow} className='cancelReviewButton'>Cancel</button>
