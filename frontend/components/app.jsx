@@ -8,6 +8,8 @@ import Nav from './nav';
 import ReviewFormContainer from './review/new_review_form_container';
 import EditFormContainer from './review/edit_review_form_container';
 import search_container from './search/search_container';
+import Footer from './footer';
+import NotFound from './notFound';
 
 //containing routes and render the correct info 
 const App = () => (
@@ -19,8 +21,9 @@ const App = () => (
             <ProtectedRoute exact path='/items/:itemId/review/new' component={ReviewFormContainer}/>
             <ProtectedRoute exact path='/items/:itemId/:reviewId/edit' component={EditFormContainer}/>
             <Route exact path='/search/:keyword' component={search_container}/>
-            {/* //404 routes */}
+            <Route path='/' component={NotFound}></Route>
         </Switch>
+        <Footer/>        
     </div>
 );
 

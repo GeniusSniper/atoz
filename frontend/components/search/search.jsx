@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Search extends React.Component {
     componentDidMount(){
@@ -13,10 +14,14 @@ class Search extends React.Component {
         items.forEach(item => {
             if(item.item_name.includes(need) || item.descrption.includes(need)){
                 result.push(
-                    <div key={item.item_name} className='searchItems'>
-                        <div><img src={item.image_url[0]} alt="img" className='searchImgs'/></div>
-                        <div>{item.item_name}</div>
-                        <div>${item.item_price}</div>
+                    <div key={item.item_name}>
+                        <Link to={`/items/${item.id}`} className='searchLink'> 
+                            <div className='searchItems'>
+                                <div><img src={item.image_url[0]} alt="img" className='searchImgs'/></div>
+                                <div>{item.item_name}</div>
+                                <div>${item.item_price}</div>
+                            </div>
+                        </Link>
                     </div>
                 )
             }
