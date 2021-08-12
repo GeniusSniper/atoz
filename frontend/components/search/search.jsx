@@ -9,14 +9,21 @@ class Search extends React.Component {
         let items = this.props.items;
         if(items.length === 0) return null;
         let need = this.props.match.params.keyword;
-        let result = [];
-        items.forEach(item => {
-            if(item.item_name.includes(need) || item.descrption.includes(need))
-            result.push(item);
+        let result = items.map(item => {
+            if(item.item_name.includes(need) || item.descrption.includes(need)){
+                return (
+                    <div key={item.item_name} className='searchItems'>
+                        <div><img src={item.image_url[0]} alt="img" /></div>
+                        <div>{item.item_name}</div>
+                        <div>{item.item_price}</div>
+                    </div>
+                )
+            }
+            return null;
         });
         return (
-            <div>
-
+            <div className='searchResult'>
+                {result}
             </div>
         );
     }
