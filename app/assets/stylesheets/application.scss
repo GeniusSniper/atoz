@@ -69,6 +69,7 @@ html {
     bottom: 0;
     border-top: 2px solid black;
     font-size: x-large;
+    background-color: rgb(232, 238, 255);
 }
 .footerBox {
     display: flex;
@@ -77,4 +78,7 @@ html {
 }
 .footerAbout {
     place-self: center;
+}
+.icon{
+    height: 32px;
 }
