@@ -44,30 +44,32 @@ class ReviewForm extends React.Component {
               {this.props.formType}&nbsp;review
             </div>
             <div className='reviewFormRating'>
-              <p>Rating</p>
+              <p>Overall rating</p>
               <label>1
-                <input type="radio" value={1} onClick={this.update('rating')} />
+                <input type="radio" value={1} onClick={this.update('rating')} name='radioButton' />
               </label>
               <label>2
-                <input type="radio" value={2} onClick={this.update('rating')} />
+                <input type="radio" value={2} onClick={this.update('rating')}  name='radioButton'/>
               </label>
               <label>3
-                <input type="radio" value={3} onClick={this.update('rating')} />
+                <input type="radio" value={3} onClick={this.update('rating')}  name='radioButton'/>
               </label>
               <label>4
-                <input type="radio" value={4} onClick={this.update('rating')} />
+                <input type="radio" value={4} onClick={this.update('rating')}  name='radioButton'/>
               </label>
               <label>5
-                <input type="radio" value={5} onClick={this.update('rating')} />
+                <input type="radio" value={5} onClick={this.update('rating')}  name='radioButton'/>
               </label>
             </div>
             <div className='reviewFormComment'>
-              <p>Review</p>
-              <textarea cols="40" rows="15" value={this.state.body} onChange={this.update("body")} className='textarea' />
+              <p>Add a written review</p>
+              <textarea cols="40" rows="15" value={this.state.body} onChange={this.update("body")} className='textarea' placeholder='What did you like or dislike? What did you use this product for?'/>
             </div>
             <button className='reviewFormButton'>{this.props.formType} review</button>
           </form>
-          <button onClick={this.navigateToItemShow}>Cancel</button>
+          <div>
+            <button onClick={this.navigateToItemShow} className='cancelReviewButton'>Cancel</button>
+          </div>
         </div>
       </div>
     );

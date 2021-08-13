@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from './searchBar';
 
 const Greeting = ({ currentUser, logout }) => {
   const navbar = () => (
@@ -27,15 +28,14 @@ const Greeting = ({ currentUser, logout }) => {
     <div className='navBar'>
       <div className='nav-bar'>
         <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="AtoZ" className='logo'/></Link>
-        <div className='searchTool'>
-          <input type="text" placeholder='' className='searchBar'/>
-          <button className='searchButton'><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/seach_icon_by_skydragon.png" alt="search" className='searchIcon' /></button>
+        <div>
+          <SearchBar/>
         </div>
         <div className='navEnd'>
           {currentUser ? welcoming() : navbar()}
-          <div className='navCartButton'>
+          {/* <div className='navCartButton'>
             <button >Cart</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

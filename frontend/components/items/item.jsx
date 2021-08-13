@@ -12,6 +12,7 @@ class Item extends React.Component{
 
     componentDidMount(){
         this.props.needItem(this.props.match.params.itemId);
+        document.title = this.props.item.item_name;
     }
 
     render(){
@@ -28,7 +29,8 @@ class Item extends React.Component{
             if(!review) return null;
             return(
             <ItemReviewsContainer review={review} key={Math.random()} itemId={item.id}/>
-        )});
+        )})
+
 
         return(
             <div className='eachItem'>

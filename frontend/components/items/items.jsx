@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class Items extends React.Component{
     componentDidMount(){
         this.props.allItems();
+        document.title = 'Atoz'
     }
 
     render(){
@@ -22,7 +23,7 @@ class Items extends React.Component{
                     ))}
                 </ul>
             </div>
-        )
+        );
         return(
             <>
                 <div className='zIndex'>

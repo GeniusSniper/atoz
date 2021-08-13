@@ -7,6 +7,9 @@ import Item_container from './items/item_container';
 import Nav from './nav';
 import ReviewFormContainer from './review/new_review_form_container';
 import EditFormContainer from './review/edit_review_form_container';
+import search_container from './search/search_container';
+import Footer from './footer';
+import NotFound from './notFound';
 
 //containing routes and render the correct info 
 const App = () => (
@@ -17,8 +20,10 @@ const App = () => (
             <Route exact path='/items/:itemId' component={Item_container}/>
             <ProtectedRoute exact path='/items/:itemId/review/new' component={ReviewFormContainer}/>
             <ProtectedRoute exact path='/items/:itemId/:reviewId/edit' component={EditFormContainer}/>
-            {/* //404 routes */}
+            <Route exact path='/search/:keyword' component={search_container}/>
+            <Route path='/' component={NotFound}></Route>
         </Switch>
+        <Footer/>        
     </div>
 );
 
