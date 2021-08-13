@@ -22,7 +22,7 @@ class Items extends React.Component{
                     ))}
                 </ul>
             </div>
-        )
+        );
         return(
             <>
                 <div className='zIndex'>

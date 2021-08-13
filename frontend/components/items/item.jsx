@@ -28,7 +28,8 @@ class Item extends React.Component{
             if(!review) return null;
             return(
             <ItemReviewsContainer review={review} key={Math.random()} itemId={item.id}/>
-        )});
+        )})
+
 
         return(
             <div className='eachItem'>
