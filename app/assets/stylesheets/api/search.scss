@@ -27,10 +27,26 @@
 .searchItems:hover{
     border: 2px solid orange;
 }
+.searchImgsDiv {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
 .searchImgs {
     width: 100px;
     height: 100px;
+    max-height: 100px;
+    max-width: none;
+    bottom: -4444px;
+    left: -4444px;
+    margin: auto;
+    right: -4444px;
+    top: -4444px;
 }
 .searchLink {
     text-decoration: none;
+}
+.searchNoResult {
+    font-size: x-large;
+    line-height: 24px;
 }

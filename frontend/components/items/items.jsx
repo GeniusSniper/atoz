@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class Items extends React.Component{
     componentDidMount(){
         this.props.allItems();
+        document.title = 'Atoz'
     }
 
     render(){

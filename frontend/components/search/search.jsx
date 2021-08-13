@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class Search extends React.Component {
     componentDidMount(){
         this.props.allItems();
+        document.title = this.props.match.params.keyword;
     }
 
     render(){
@@ -17,7 +18,9 @@ class Search extends React.Component {
                     <div key={item.item_name}>
                         <Link to={`/items/${item.id}`} className='searchLink'> 
                             <div className='searchItems'>
-                                <div><img src={item.image_url[0]} alt="img" className='searchImgs'/></div>
+                                <div className='searchImgsDiv'>
+                                    <img src={item.image_url[0]} alt="img" className='searchImgs'/>
+                                </div>
                                 <div>{item.item_name}</div>
                                 <div>${item.item_price}</div>
                             </div>
@@ -28,10 +31,11 @@ class Search extends React.Component {
         });
         if(result.length === 0){
             result = (
-                <div>
+                <div className='searchNoResult'>
                     <h2>
                         No results for {need}.
                     </h2>
+                    <br />
                     <h2>
                         Try checking your spelling or use more general terms
                     </h2>

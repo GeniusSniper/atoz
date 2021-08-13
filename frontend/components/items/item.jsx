@@ -12,6 +12,7 @@ class Item extends React.Component{
 
     componentDidMount(){
         this.props.needItem(this.props.match.params.itemId);
+        document.title = this.props.item.item_name;
     }
 
     render(){
