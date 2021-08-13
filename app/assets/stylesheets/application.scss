@@ -62,3 +62,19 @@ html {
 .dropdown:hover .dropdown-greetingButton{
     display: block;
 }
+.footer {
+    display: grid;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 2px solid black;
+    font-size: x-large;
+}
+.footerBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.footerAbout {
+    place-self: center;
+}
