@@ -11,7 +11,7 @@
 #
 class User < ApplicationRecord
 
-    attr_reader :password, :cart
+    attr_reader :password
     attr_accessor :email, :address
   
     validates :username, :password_digest, :session_token, presence: true
@@ -23,6 +23,7 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token # a user must have a session token 
     
     has_many :reviews, foreign_key: :user_id, class_name: :Review
+    has_one :cart, foreign_key: :user_id, class_name: :Cart
   
     def self.find_by_credentials(username, password) # finding the user by username and password 
       user = User.find_by(username: username)
@@ -43,19 +44,6 @@ class User < ApplicationRecord
       generate_unique_session_token
       save!
       self.session_token
-    end
-
-    def total_amount
-        @cart.inject { |acc, i| acc.price += i}
-    end
-  
-    def add_item(item)
-        @cart ||= []
-        @cart.push(item)
-    end
-
-    def purchase
-        @cart = []
     end
 
     private
