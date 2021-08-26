@@ -12,12 +12,12 @@ class Item extends React.Component{
 
     componentDidMount(){
         this.props.needItem(this.props.match.params.itemId);
-        document.title = this.props.item.item_name;
     }
 
     render(){
         const item = this.props.item;
         if(!item.id) return null;
+        document.title = this.props.item.item_name;
         const itemimgs = item.image_url.map((img, j) => (
             <div className='itemImgsGrid'  key={img}>
                 <div className='itemImgBlock'>
