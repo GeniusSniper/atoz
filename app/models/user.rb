@@ -46,11 +46,8 @@ class User < ApplicationRecord
     end
 
     def addItem(item)
-      cart.push(item)
-    end
-
-    def allItems
-      cart
+      cart[item.id] = item;
+      save!
     end
 
     private

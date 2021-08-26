@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2021_08_25_185743) do
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "cart", default: [], array: true
+    t.json "cart", default: {}
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end
