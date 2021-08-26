@@ -14,7 +14,7 @@ class User < ApplicationRecord
     attr_reader :password
     attr_accessor :email, :address
   
-    validates :username, :password_digest, :session_token, :cart, presence: true
+    validates :username, :password_digest, :session_token, presence: true
     validates :username, uniqueness: true
     validates :password, length: { minimum: 6 }, allow_nil: true
     validates :email, length: { minimum: 1, message: 'email can not be blank' }, allow_nil: true
