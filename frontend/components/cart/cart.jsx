@@ -5,9 +5,11 @@ class Cart extends React.Component{
         let items = this.props.cart.map( item => {
 
         })
-        
+
         return (
-            null
+            <div>
+                Your Atoz Cart is empty
+            </div>
         )
     }
 }
