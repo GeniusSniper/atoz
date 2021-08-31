@@ -14,6 +14,10 @@ class Item extends React.Component{
         this.props.needItem(this.props.match.params.itemId);
     }
 
+    adding_to_cart(){
+        
+    }
+
     render(){
         const item = this.props.item;
         if(!item.id) return null;
@@ -57,6 +61,7 @@ class Item extends React.Component{
                             <div className='rightSessionFlex'>
                                 <p className='eachItemPrice'>${item.item_price}</p>
                                 {/* <p>numbers of item left: {item.num_of_item_left}</p> */}
+                                <p>Qty: 1</p>
                                 <button className='addCartButton'>Add to Cart</button>
                                 <br />
                                 <button className='purchaseButton'>Buy Now</button>
