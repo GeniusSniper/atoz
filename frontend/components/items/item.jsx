@@ -8,6 +8,8 @@ class Item extends React.Component{
         this.state = {
             i: 0
         }
+
+        this.adding_to_cart = this.adding_to_cart.bind(this);
     }
 
     componentDidMount(){
@@ -15,7 +17,7 @@ class Item extends React.Component{
     }
 
     adding_to_cart(){
-        
+
     }
 
     render(){
@@ -62,7 +64,7 @@ class Item extends React.Component{
                                 <p className='eachItemPrice'>${item.item_price}</p>
                                 {/* <p>numbers of item left: {item.num_of_item_left}</p> */}
                                 <p>Qty: 1</p>
-                                <button className='addCartButton'>Add to Cart</button>
+                                <button className='addCartButton' onClick={this.adding_to_cart}>Add to Cart</button>
                                 <br />
                                 <button className='purchaseButton'>Buy Now</button>
                             </div>

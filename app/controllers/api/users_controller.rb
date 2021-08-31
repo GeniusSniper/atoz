@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+  before_action :require_logged_in, only: [:update]
   def create
     @user = User.new(user_params)
     
@@ -10,8 +11,20 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def update
+    if current_user.update(user_cart)
+      render 'api/users/show'
+    else
+      render json current_user.errors.full_messages, status: 422
+    end
+  end
+
   private
   def user_params
     params.require(:user).permit(:username, :password, :email, :address)
+  end
+
+  def user_cart
+    params.require(:user).permit(:cart)
   end
 end
