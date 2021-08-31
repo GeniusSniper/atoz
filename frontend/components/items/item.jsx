@@ -56,7 +56,7 @@ class Item extends React.Component{
                         <div className='rightSessionBox'>
                             <div className='rightSessionFlex'>
                                 <p className='eachItemPrice'>${item.item_price}</p>
-                                <p>numbers of item left: {item.num_of_item_left}</p>
+                                {/* <p>numbers of item left: {item.num_of_item_left}</p> */}
                                 <button className='addCartButton'>Add to Cart</button>
                                 <br />
                                 <button className='purchaseButton'>Buy Now</button>

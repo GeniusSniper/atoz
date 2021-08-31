@@ -33,9 +33,9 @@ const Greeting = ({ currentUser, logout }) => {
         </div>
         <div className='navEnd'>
           {currentUser ? welcoming() : navbar()}
-          {/* <div className='navCartButton'>
-            <button >Cart</button>
-          </div> */}
+          <div className='navCartButton'>
+            <button><Link to='/cart'>Cart</Link></button>
+          </div>
         </div>
       </div>
     </div>
