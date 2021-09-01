@@ -2,11 +2,14 @@ import { connect } from 'react-redux';
 import Cart from './cart';
 
 const mst = state => {
-    let cart = [];
-    let user = state.entities.users;
-    if(Object.values(user).length) cart = Object.values(user[Object.keys(user)[0]].cart);
+    let cart, user;
+    if(state.session.id){
+        user = state.entities.users[state.session.id];
+        cart = user.cart;
+    }
     return ({
-        cart
+        cart,
+        user
     })
 };
 
