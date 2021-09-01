@@ -62,7 +62,7 @@ class Item extends React.Component{
                         <div className='midSessionBox'>
                             <div className='midSessionFlex'>
                                 <h1 className='eachItemTitle'>{item.item_name}</h1>
-                                <p className='eachItemPrice'>${item.item_price}</p>
+                                <p className='eachItemPrice'>${priceToS('' + item.item_price)}</p>
                                 <p className='itemDescrption'>{item.descrption}</p>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ class Item extends React.Component{
                     <div className='rightSession'>
                         <div className='rightSessionBox'>
                             <div className='rightSessionFlex'>
-                                <p className='eachItemPrice'>${item.item_price}</p>
+                                <p className='eachItemPrice'>${priceToS('' + item.item_price)}</p>
                                 {/* <p>numbers of item left: {item.num_of_item_left}</p> */}
                                 <div>
                                     <label htmlFor="">Qty:</label>
@@ -108,5 +108,19 @@ class Item extends React.Component{
         )
     }
 };
+
+let priceToS = num => {
+    let str = '';
+    let arr = num.split('.');
+    for(let i = 0; i < arr[0].length; i++){
+        if((arr[0].length - i) % 3 === 0 && i !==0){
+            str += ',' + arr[0][i]
+        } else {
+            str += arr[0][i];
+        }
+    }
+    str += '.' + arr[1];
+    return str;
+}
 
 export default Item;
