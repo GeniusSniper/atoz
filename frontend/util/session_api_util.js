@@ -21,10 +21,10 @@ export const logout = () => (
   })
 );
 
-export const cart = user => (
+export const cart = cart => (
   $.ajax({
     method: 'patch',
     url: `api/user`,
-    data: { user }
+    data: { cart }
   })
 );

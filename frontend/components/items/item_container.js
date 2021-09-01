@@ -20,7 +20,7 @@ const mst = (state, props) => {
 const mdt = dispatch => ({
     needItem: itemId => dispatch(needItem(itemId)),
     // deleteReview: reviewId => dispatch(deleteItemReview(reviewId)),
-    addingToCart: user => dispatch(updateCart(user)),
+    addingToCart: cart => dispatch(updateCart(cart)),
 });
 
 export default connect(mst,mdt)(item);

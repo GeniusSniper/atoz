@@ -45,8 +45,8 @@ export const logout = () => dispatch => (
   ))
 );
 
-export const updateCart = (user) => (dispatch) => (
-  APIUtil.cart(user).then(user => (
+export const updateCart = (cart) => (dispatch) => (
+  APIUtil.cart(cart).then(user => (
     dispatch(receiveCurrentUser(user))
   ))
 );
