@@ -21,7 +21,7 @@ class Item extends React.Component{
         e.preventDefault();
         if(this.props.user){
             if(this.props.user.cart[this.props.itemId]){
-                this.props.user.cart[this.props.itemId].qty = this.state.qty + parseInt(this.props.user.cart[this.props.itemId].qty);
+                this.props.user.cart[this.props.itemId].qty = parseInt(this.state.qty) + parseInt(this.props.user.cart[this.props.itemId].qty);
             } else {
                 this.props.user.cart[this.props.itemId] = this.props.item;
             }
@@ -73,7 +73,19 @@ class Item extends React.Component{
                                 <p className='eachItemPrice'>${item.item_price}</p>
                                 {/* <p>numbers of item left: {item.num_of_item_left}</p> */}
                                 <div>
-                                    <p>Qty: 1</p>
+                                    <label htmlFor="">Qty:</label>
+                                    <select name="qty" id="qty" value={this.state.value} onChange={e=> this.setState({qty: e.target.value})}>
+                                        <option value={1}>1</option>
+                                        <option value={2}>2</option>
+                                        <option value={3}>3</option>
+                                        <option value={4}>4</option>
+                                        <option value={5}>5</option>
+                                        <option value={6}>6</option>
+                                        <option value={7}>7</option>
+                                        <option value={8}>8</option>
+                                        <option value={9}>9</option>
+                                        <option value={10}>10</option>
+                                    </select>
                                 </div>                                    
                                 <button className='addCartButton' onClick={this.adding_to_cart}>Add to Cart</button>
                                 <br />
