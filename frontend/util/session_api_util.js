@@ -27,4 +27,4 @@ export const cart = user => (
     url: `api/user`,
     data: { user }
   })
-)
+);

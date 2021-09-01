@@ -45,10 +45,10 @@ class User < ApplicationRecord
       self.session_token
     end
 
-    def addItem(item)
-      cart[item.id] = item;
-      save!
-    end
+    # def addItem(item)
+    #   cart[item.id] = item;
+    #   save!
+    # end
 
     private
     def ensure_session_token

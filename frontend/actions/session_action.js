@@ -49,5 +49,5 @@ export const updateCart = (user) => (dispatch) => (
   APIUtil.cart(user).then(user => (
     dispatch(receiveCurrentUser(user))
   ))
-)
+);
 
