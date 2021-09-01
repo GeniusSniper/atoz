@@ -6,7 +6,8 @@ class Item extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            i: 0
+            i: 0,
+            qty: 1
         }
 
         this.adding_to_cart = this.adding_to_cart.bind(this);
@@ -16,8 +17,16 @@ class Item extends React.Component{
         this.props.needItem(this.props.match.params.itemId);
     }
 
-    adding_to_cart(){
-
+    adding_to_cart(e){
+        e.preventDefault();
+        if(this.props.user){
+            if(this.props.user.cart[this.props.itemId]){
+                this.props.user.cart[this.props.itemId].qty = this.state.qty + parseInt(this.props.user.cart[this.props.itemId].qty);
+            } else {
+                this.props.user.cart[this.props.itemId] = this.props.item;
+            }
+            this.props.addingToCart(this.props.user.cart);
+        }
     }
 
     render(){
@@ -63,7 +72,9 @@ class Item extends React.Component{
                             <div className='rightSessionFlex'>
                                 <p className='eachItemPrice'>${item.item_price}</p>
                                 {/* <p>numbers of item left: {item.num_of_item_left}</p> */}
-                                <p>Qty: 1</p>
+                                <div>
+                                    <p>Qty: 1</p>
+                                </div>                                    
                                 <button className='addCartButton' onClick={this.adding_to_cart}>Add to Cart</button>
                                 <br />
                                 <button className='purchaseButton'>Buy Now</button>

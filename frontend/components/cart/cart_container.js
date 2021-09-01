@@ -5,7 +5,7 @@ const mst = state => {
     let cart, user;
     if(state.session.id){
         user = state.entities.users[state.session.id];
-        cart = user.cart;
+        cart = Object.values(user.cart);
     }
     return ({
         cart,

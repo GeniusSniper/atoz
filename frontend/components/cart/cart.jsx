@@ -6,8 +6,8 @@ class Cart extends React.Component{
         let items = this.props.cart.map( item => {
             return (
                 <div key={item.id}>
-                    <div className='eachItemMainImg'>
-                        <img src={`${item.image_url[0]}`} alt="imgs" className='eachImgPit'/>                            
+                    <div>
+                        {/* <img src={`${item.image_url[0]}`} alt="imgs" className='eachImgPit'/>                             */}
                     </div>
                     <div>{item.item_name}</div>
                 </div>

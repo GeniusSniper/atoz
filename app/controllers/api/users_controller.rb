@@ -12,7 +12,8 @@ class Api::UsersController < ApplicationController
   end
 
   def update
-    if current_user.update(user_cart)
+    @user = current_user
+    if current_user.update(cart: params[:user])
       render 'api/users/show'
     else
       render json current_user.errors.full_messages, status: 422
