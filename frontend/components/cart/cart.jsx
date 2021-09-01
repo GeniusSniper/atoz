@@ -9,15 +9,17 @@ class Cart extends React.Component{
             totalPrice += parseFloat(item.item_price) * parseFloat(item.qty);
             return (
                 <div key={item.id} className='cartIem'>
-                    <div>
-                        {/* <img src={`${item.image_url[0]}`} alt="imgs" className='eachImgPit'/>                             */}
-                    </div>
-                    <div>
-                        <div>{item.item_name}</div>
-                        <div>${priceToS(item.item_price)}</div>
+                    <div className='cartEachItem'>
                         <div>
-                            <div>Qty:{item.qty}</div>
-                            {/* <div><button>Delete</button></div> */}
+                            <img src={`${item.image_url[0]}`} alt="imgs" className='cartItemImg'/>                            
+                        </div>
+                        <div>
+                            <div>{item.item_name}</div>
+                            <div>${priceToS(item.item_price)}</div>
+                            <div>
+                                <div>Qty:{item.qty}</div>
+                                {/* <div><button>Delete</button></div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -25,13 +27,15 @@ class Cart extends React.Component{
         });
         let text = items.length === 0 ? 'Your Atoz Cart is empty' : 'Shopping Cart';
         return (
-            <div>
-                <div>
-                    <div>{text}</div>
-                    <div>{items}</div>
-                </div>
-                <div>
-                    <div>
+            <div className='cartMain'>
+                <div className='cartShow'>
+                    <div className='cartShoppingCart'>
+                        <div className='cartShoppingList'>
+                            <div>{text}</div>
+                            <div>{items}</div>
+                        </div>
+                    </div>
+                    <div className='cartCheckout'>
                         <h3>Subtotal ({totalItem} item): ${priceToS('' + totalPrice)}</h3>
                         <button>Proceed to checkout</button>
                     </div>

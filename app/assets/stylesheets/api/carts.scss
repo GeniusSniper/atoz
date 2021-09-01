@@ -1,3 +1,41 @@
 // Place all the styles related to the api::carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cartMain {
+    display: block;
+    padding: 14px 18px 50%;
+    line-height: 20px;
+    min-width: 1000px;
+}
+.cartShow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cartShoppingCart {
+    width: 80%;
+    padding-right: 20px;
+}
+.cartCheckout {
+    padding: 20px 20px 15px 20px;
+    background-color: white;
+    width: auto;
+}
+.cartShoppingList{
+    padding: 20px 20px 15px 20px;
+    background-color: white;
+}
+.cartIem {
+    margin-bottom: 14px;
+    border: 2px solid rgb(233, 232, 232);
+}
+.cartItemImg {
+    width: 220px;
+    aspect-ratio: 220 / 220;
+    height: 220px;
+}
+.cartEachItem {
+    display: flex;
+    flex-direction: row;
+}
