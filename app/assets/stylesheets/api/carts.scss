@@ -31,9 +31,12 @@
     border: 2px solid rgb(233, 232, 232);
 }
 .cartItemImg {
-    width: 220px;
-    aspect-ratio: 220 / 220;
-    height: 220px;
+    width: 100%;
+    // overflow: hidden;
+    // height: 100%;
+    max-width: 180px;
+    aspect-ratio: 180 / 180;
+    // max-height: 220px;
 }
 .cartEachItem {
     display: flex;

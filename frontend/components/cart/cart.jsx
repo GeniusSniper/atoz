@@ -46,6 +46,7 @@ class Cart extends React.Component{
 }
 
 let priceToS = num => {
+    if(num.length < 4) return num;
     let str = '';
     let arr = num.split('.');
     for(let i = 0; i < arr[0].length; i++){
