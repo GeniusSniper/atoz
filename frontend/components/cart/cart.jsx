@@ -15,7 +15,7 @@ class Cart extends React.Component{
                         </div>
                         <div>
                             <div>{item.item_name}</div>
-                            <div>${priceToS(item.item_price)}</div>
+                            <div className='cartPrice'>${priceToS(item.item_price)}</div>
                             <div>
                                 <div>Qty:{item.qty}</div>
                                 {/* <div><button>Delete</button></div> */}
@@ -39,7 +39,7 @@ class Cart extends React.Component{
                         </div>
                     </div>
                     <div className='cartCheckout'>
-                        <h3>Subtotal ({totalItem} item): ${priceToS('' + totalPrice)}</h3>
+                        <h3>Subtotal ({totalItem} item): <h1 className='cartPrice'>${priceToS('' + totalPrice)}</h1></h3>
                         <button>Proceed to checkout</button>
                     </div>
                 </div>
