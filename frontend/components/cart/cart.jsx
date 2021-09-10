@@ -14,7 +14,7 @@ class Cart extends React.Component{
                             <div>
                                 <img src={`${item.image_url[0]}`} alt="imgs" className='cartItemImg'/>                            
                             </div>
-                            <div>
+                            <div className='cartEachItemDetail'>
                                 <div>{item.item_name}</div>
                                 <div>
                                     <div>Qty:{item.qty}</div>
