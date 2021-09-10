@@ -23,6 +23,7 @@ class Item extends React.Component{
             if(this.props.user.cart[this.props.itemId]){
                 this.props.user.cart[this.props.itemId].qty = parseInt(this.state.qty) + parseInt(this.props.user.cart[this.props.itemId].qty);
             } else {
+                this.props.item.qty = parseInt(this.state.qty);
                 this.props.user.cart[this.props.itemId] = this.props.item;
             }
             this.props.addingToCart(this.props.user.cart);
