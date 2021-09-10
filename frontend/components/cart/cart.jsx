@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Cart extends React.Component{
     render(){
-        if(!this.props.cart) return null;
+        // if(!this.props.cart) return null;
         let totalItem = 0, totalPrice = 0.00;
         let items = this.props.cart.map( item => {
             totalItem += parseInt(item.qty);
@@ -12,10 +13,14 @@ class Cart extends React.Component{
                     <div className='cartEachItem'>
                         <div className='cartEachItem01'>
                             <div>
-                                <img src={`${item.image_url[0]}`} alt="imgs" className='cartItemImg'/>                            
+                                <Link to={`items/${item.id}`} className='cartEachItemLink'>
+                                    <img src={`${item.image_url[0]}`} alt="imgs" className='cartItemImg'/>                            
+                                </Link>
                             </div>
                             <div className='cartEachItemDetail'>
-                                <div>{item.item_name}</div>
+                                <Link to={`items/${item.id}`} className='cartEachItemLink'>
+                                    <div>{item.item_name}</div>
+                                </Link>
                                 <div>
                                     <div>Qty:{item.qty}</div>
                                     {/* <div><button>Delete</button></div> */}
