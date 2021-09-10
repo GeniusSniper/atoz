@@ -31,7 +31,10 @@ class Cart extends React.Component{
                 <div className='cartShow'>
                     <div className='cartShoppingCart'>
                         <div className='cartShoppingList'>
-                            <div>{text}</div>
+                            <div className='cartTitle'>
+                                {text}
+                            </div>
+                            <br />
                             <div>{items}</div>
                         </div>
                     </div>
