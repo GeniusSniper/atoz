@@ -32,8 +32,8 @@ class Cart extends React.Component{
                                 <Link to={`items/${item.id}`} className='cartEachItemLink'>
                                     <div>{item.item_name}</div>
                                 </Link>
-                                <div>
-                                    <div>Qty:{item.qty}</div>
+                                <div className='cartEachItemQt'>
+                                    <div className='cartEachItemQt1'>Qty:{item.qty}</div>
                                     <div className='cartDeleteItem' onClick={() => this.deleteItem(item.id)}>Delete</div>
                                     {/* <div><button>Delete</button></div> */}
                                 </div>
