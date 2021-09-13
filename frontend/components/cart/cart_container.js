@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { updateCart } from '../../actions/session_action';
 import Cart from './cart';
 
 const mst = state => {
@@ -14,6 +15,7 @@ const mst = state => {
 };
 
 const mdt = dispatch => ({
+    updateCart: cart => dispatch(updateCart(cart)),
 });
 
 export default connect(mst,mdt)(Cart);

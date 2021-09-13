@@ -2,6 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Cart extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.deleteItem = this.deleteItem.bind(this);
+    }
+
+    deleteItem(i){
+        this.props.user.cart[i] = undefined;
+        this.props.updateCart(this.props.user.cart);
+    }
+
     render(){
         // if(!this.props.cart) return null;
         let totalItem = 0, totalPrice = 0.00;
@@ -23,6 +34,7 @@ class Cart extends React.Component{
                                 </Link>
                                 <div>
                                     <div>Qty:{item.qty}</div>
+                                    <div className='cartDeleteItem' onClick={() => this.deleteItem(item.id)}>Delete</div>
                                     {/* <div><button>Delete</button></div> */}
                                 </div>
                             </div>
