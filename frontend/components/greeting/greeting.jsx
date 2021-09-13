@@ -34,7 +34,7 @@ const Greeting = ({ currentUser, logout }) => {
         <div className='navEnd'>
           {currentUser ? welcoming() : navbar()}
           <div className='navCartButton'>
-            <button><Link to='/cart'>Cart</Link></button>
+            <Link to='/cart' className='shoppingCart'><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/carticon_by_skydragon.png" alt="Cart" className='shoppingCartIcon'/><a className='shoppingCartText'>Cart</a></Link>
           </div>
         </div>
       </div>
