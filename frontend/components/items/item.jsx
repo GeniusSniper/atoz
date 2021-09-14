@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import ItemReviewsContainer from '../review/item_reviews_container';
 
 class Item extends React.Component{
@@ -28,8 +28,15 @@ class Item extends React.Component{
             }
             this.props.addingToCart(this.props.user.cart);
         } else {
-            
+            if(this.props.cart[this.props.itemId]){
+                this.props.cart[this.props.itemid].qty = parseInt(this.state.qty) + parseInt(this.props.cart[this.props.itemId].qty);
+            } else {
+                this.props.item.qty = parseInt(this.state.qty);
+                this.props.cart[this.props.itemId] = this.props.item;
+            }
+            this.props.addToCart(this.props.cart);
         }
+        window.location.replace("/#/cart");
     }
 
     render(){

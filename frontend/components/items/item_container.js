@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { needItem } from '../../actions/items_action';
-import { updateCart } from '../../actions/session_action';
+import { addToCart, updateCart } from '../../actions/session_action';
 import { selectItem, selectReviewsForItem } from '../../reducer/selectors';
 import item from './item';
 
@@ -10,17 +10,20 @@ const mst = (state, props) => {
     const reviews = selectReviewsForItem(state.entities, item);
     let user;
     if(state.session.id) user = state.entities.users[state.session.id];
+    let cart = state.session.cart;
     return {
         itemId,
         item,
         reviews,
-        user
+        user,
+        cart
     }
 }
 const mdt = dispatch => ({
     needItem: itemId => dispatch(needItem(itemId)),
     // deleteReview: reviewId => dispatch(deleteItemReview(reviewId)),
     addingToCart: cart => dispatch(updateCart(cart)),
+    addToCart: cart => dispatch(addToCart(cart)),
 });
 
 export default connect(mst,mdt)(item);

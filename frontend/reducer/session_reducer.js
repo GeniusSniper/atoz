@@ -9,7 +9,7 @@ const sessionReducer = (state = _nullUser, action) => {
       case LOGOUT_CURRENT_USER:
         return _nullUser;
       case ADD_ITEM:
-        return { cart }
+        return { cart: action.cart }
       case CLEAR_CART:
         return { cart: {} }
       default:
