@@ -27,6 +27,8 @@ class Item extends React.Component{
                 this.props.user.cart[this.props.itemId] = this.props.item;
             }
             this.props.addingToCart(this.props.user.cart);
+        } else {
+            
         }
     }
 
