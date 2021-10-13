@@ -240,8 +240,7 @@ Item.create!( item_name: "Rain-X RX30212 Weatherbeater Wiper Blade - 12-Inches -
 image_url: [
     "https://atoz-seeds.s3.us-east-2.amazonaws.com/images/rainx_rx30212WiperBlade.jpg",
     "https://atoz-seeds.s3.us-east-2.amazonaws.com/images/rainx_rx30212WiperBlade1.jpg",
-    "https://atoz-seeds.s3.us-east-2.amazonaws.com/images/rainx_rx30212WiperBlade2.jpg",
-    "https://atoz-seeds.s3.us-east-2.amazonaws.com/images/rainx_rx30212WiperBlade3.jpg"
+    "https://atoz-seeds.s3.us-east-2.amazonaws.com/images/rainx_rx30212WiperBlade2.jpg"
 ], 
 descrption: "Long lasting durability defined by a galvanized steel frame that prevents rust and corrosion
 All natural squeegee rubber resists cracking, splitting and tearing caused by heat, cold, windshield wiper fluid and salt
