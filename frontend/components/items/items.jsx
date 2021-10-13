@@ -14,7 +14,7 @@ class Items extends React.Component{
                     {this.props.items.map(item => (
                         <div key={item.id} className='gridItem' >
                             <div className='gridContent'>
-                                <p className='itemTitle'>{item.item_name}</p>
+                                <p className='itemTitle'>{itemName(item.item_name)}</p>
                                 <div className='gridImgBox'>
                                     <Link to={`items/${item.id}`} className='gridItemLink'><img src={`${item.image_url[0]}`} alt="img_of_each_item" className='gridItemImg'/></Link>
                                 </div>
@@ -28,7 +28,7 @@ class Items extends React.Component{
             <>
                 <div className='zIndex'>
                     <div className='mainPageImgBox'>
-                        <img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/gifts-5-1316929.jpg" alt="main page" className='mainPageImg'/>
+                        <img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/deals.jpg" alt="main page" className='mainPageImg'/>
                     </div>
                 </div>
                 <div className='mainPageSession'>
@@ -40,3 +40,7 @@ class Items extends React.Component{
 };
 
 export default Items;
+
+let itemName = name => {
+    return name.length > 17 ? name.slice(0, 17) + '...' : name;
+}
