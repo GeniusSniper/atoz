@@ -16,15 +16,19 @@ class Search extends React.Component {
             if(item.item_name.includes(need) || item.descrption.includes(need)){
                 result.push(
                     <div key={item.item_name}>
-                        <Link to={`/items/${item.id}`} className='searchLink'> 
-                            <div className='searchItems'>
+                        <div className='searchItems'>
+                            <Link to={`/items/${item.id}`} className='searchLink'> 
                                 <div className='searchImgsDiv'>
                                     <img src={item.image_url[0]} alt="img" className='searchImgs'/>
                                 </div>
-                                <div>{item.item_name}</div>
+                            </Link>
+                            <div>
+                                <Link to={`/items/${item.id}`} className='searchLink'> 
+                                    <div>{item.item_name}</div>
+                                </Link>
                                 <div>${item.item_price}</div>
                             </div>
-                        </Link>
+                        </div>
                     </div>
                 )
             }
@@ -51,3 +55,8 @@ class Search extends React.Component {
 }
 
 export default Search;
+
+
+let itemName = name => {
+    return name.length > 60 ? name.slice(0, 60) + '...' : name;
+}

@@ -16,37 +16,44 @@
     object-fit: fill;
 }
 .searchResult {
-    width: 768px;
+    width: 1000px;
+    // height: 220px;
     margin: 0 auto;
     font-size: x-large;
     line-height: 24px;
 }
 .searchItems {
     display: flex;
+    height: 220px;
     flex-direction: row;
-    justify-content: space-between;
+    padding-top: 10px;
+    margin-bottom: 14px;
+    border-top: 2px solid rgb(233, 232, 232);
 }
-.searchItems:hover{
-    border: 2px solid orange;
-}
+// .searchItems:hover{
+//     border: 2px solid orange;
+// }
 .searchImgsDiv {
-    width: 100px;
-    height: 100px;
+    margin-right: 20px;
+    width: 218px;
+    height: 225px;
     overflow: hidden;
+    position: relative;
+    background-color: white;
 }
 .searchImgs {
-    width: 100px;
-    height: 100px;
-    max-height: 100px;
-    max-width: none;
+    max-height: 100%;
+    max-width: 100%;
     bottom: -4444px;
     left: -4444px;
+    position: absolute;
     margin: auto;
     right: -4444px;
     top: -4444px;
 }
 .searchLink {
     text-decoration: none;
+    color: black;
 }
 .searchNoResult {
     font-size: x-large;
