@@ -14,11 +14,11 @@ class Items extends React.Component{
                     {this.props.items.map(item => (
                         <div key={item.id} className='gridItem' >
                             <div className='gridContent'>
-                                <p className='itemTitle'>{itemName(item.item_name)}</p>
                                 <div className='gridImgBox'>
                                     <Link to={`items/${item.id}`} className='gridItemLink'><img src={`${item.image_url[0]}`} alt="img_of_each_item" className='gridItemImg'/></Link>
                                 </div>
-                                <div>${priceToS(item.item_price)}</div>
+                                <div className='itemTitle'>{itemName(item.item_name)}</div>
+                                <div className='gridItemPrice'>${priceToS(item.item_price)}</div>
                             </div>
                         </div>
                     ))}
