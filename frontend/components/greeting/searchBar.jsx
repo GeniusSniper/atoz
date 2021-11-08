@@ -15,10 +15,10 @@ class SearchBar extends React.Component{
 
     render(){
         return (
-            <div className='searchTool'>
+            <div className='searchTool' >
               <input type="search" value={this.state.text} onChange={this.update('text')} className='searchBar'/>
               <Link to={`/search/${this.state.text}`}>
-                <button className='searchButton'><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/seach_icon_by_skydragon.png" alt="search" className='searchIcon' /></button>
+                <button className='searchButton' onClick={ () => { this.setState({text: ''}) } }><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/seach_icon_by_skydragon.png" alt="search" className='searchIcon' /></button>
               </Link>
             </div>
         )
