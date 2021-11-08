@@ -21,11 +21,12 @@
 //  @import 'api/itemIndex.scss';
 //  @import 'api/carts.scss';
 
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
  
 html {
     background-color: rgb(232, 238, 255);
-    // background-color: white;
-    font-style: italic;
 }
 .mainPage {
     display: block;
