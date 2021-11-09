@@ -1,0 +1,48 @@
+.navBar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: static;
+    z-index: 5;
+    background-color: rgb(15, 17, 17);
+    min-width: 1000px;
+}
+.navLeft{
+    display: flex;
+    position: static;
+    float: none;
+    margin-right: 5px;
+}
+.logo{
+    width: 100px;
+    object-fit: contain;
+    margin: 0 20px;
+    margin-top: 18px;
+}
+.navLeft:hover{
+    border: .2px inset white;
+}
+.navEnd{
+    display: flex;
+    align-items: center;
+}
+.shoppingCart:hover{
+    border: .2px inset white;
+}
+.shoppingCartIcon{
+    height: 45px;
+    padding: 5px;
+    z-index: 6;
+}
+.shoppingCart{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.header-name{
+    margin-left: 5px;
+}
+.shoppingCartText{
+    margin-right: 5px;
+}

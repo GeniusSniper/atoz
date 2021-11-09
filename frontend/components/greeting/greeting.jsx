@@ -5,7 +5,7 @@ import SearchBar from './searchBar';
 const Greeting = ({ currentUser, logout }) => {
   const navbar = () => (
     <div className='dropdown'>
-      <span className="header-name">Welcome to my page, Sign in</span>
+      <span className="header-name">Welcome to my page, Log in</span>
       <div className='dropdown-greetingButton'>
         <Link to="/login" className='header-button'><button className='loginButton'>Log in</button></Link>
         <br />
@@ -26,16 +26,25 @@ const Greeting = ({ currentUser, logout }) => {
   
   return (
     <div className='navBar'>
-      <div className='nav-bar'>
-        <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="AtoZ" className='logo'/></Link>
+      {/* <div className='nav-bar'> */}
+        <div className='navLeft'>
+          <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="AtoZ" className='logo'/></Link>
+        </div>
         <SearchBar/>
         <div className='navEnd'>
           {currentUser ? welcoming() : navbar()}
           <div className='navCartButton'>
-            <Link to='/cart' className='shoppingCart'><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/carticon_by_skydragon.png" alt="Cart" className='shoppingCartIcon'/><p className='shoppingCartText'>Cart</p></Link>
+            <Link to='/cart' className='shoppingCart'>
+              <img 
+                src="https://atoz-seeds.s3.us-east-2.amazonaws.com/carticon_by_skydragon.png" 
+                alt="Cart" 
+                className='shoppingCartIcon'
+              />
+              <div className='shoppingCartText'>Cart</div>
+            </Link>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   )
   // return currentUser ? welcoming() : navbar();
