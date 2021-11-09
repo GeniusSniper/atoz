@@ -34,6 +34,7 @@ html {
     display: block;
     width: 100%;
     margin-bottom: 10%;
+    min-width: 1000px;
 }
 // .logo {
 //     height: 40px;
@@ -68,23 +69,6 @@ html {
 
 .dropdown:hover .dropdown-greetingButton{
     display: block;
-}
-.footer {
-    display: grid;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    border-top: 2px solid black;
-    font-size: x-large;
-    background-color: rgb(232, 238, 255);
-}
-.footerBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.footerAbout {
-    place-self: center;
 }
 .icon{
     height: 32px;

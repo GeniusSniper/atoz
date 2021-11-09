@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    width: 100%;
+    font-size: x-large;
+    background-color: rgb(35, 47, 62);
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+.footerAbout {
+    place-self: center;
+}

@@ -8,7 +8,6 @@ import Nav from './nav';
 import ReviewFormContainer from './review/new_review_form_container';
 import EditFormContainer from './review/edit_review_form_container';
 import search_container from './search/search_container';
-import Footer from './footer';
 import NotFound from './notFound';
 import cart_container from './cart/cart_container';
 
@@ -25,7 +24,6 @@ const App = () => (
             <Route path='/cart' component={cart_container}></Route>
             <Route path='/' component={NotFound}></Route>
         </Switch>
-        <Footer/>        
     </div>
 );
 
