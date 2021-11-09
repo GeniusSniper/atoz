@@ -19,7 +19,7 @@ const Greeting = ({ currentUser, logout }) => {
     <div className="dropdown">
       <span className="header-name">Welcome to my page, {currentUser.username}</span>
       <div className='dropdown-greetingButton'>
-        <button className="header-button" onClick={logout}>Log Out</button>
+        <button className="loginButton" onClick={logout}>Log Out</button>
       </div>
     </div>
   );
