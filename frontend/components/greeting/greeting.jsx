@@ -28,9 +28,7 @@ const Greeting = ({ currentUser, logout }) => {
     <div className='navBar'>
       <div className='nav-bar'>
         <Link to="/" ><img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/atoz_logo.png" alt="AtoZ" className='logo'/></Link>
-        <div>
-          <SearchBar/>
-        </div>
+        <SearchBar/>
         <div className='navEnd'>
           {currentUser ? welcoming() : navbar()}
           <div className='navCartButton'>
