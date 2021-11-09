@@ -29,23 +29,52 @@
     display: flex;
     align-items: center;
 }
+.headerName{
+    font-weight: 700;
+}
 // .shoppingCart:hover{
 //     border: .1 inset white;
 // }
 .shoppingCartIcon{
-    height: 45px;
-    padding: 5px;
-    z-index: 6;
+    height: 60px;
+    position: absolute;
+    bottom: -4454px;
+    left: -4444px;
+    margin: auto;
+    right: -4444px;
+    top: -4444px;
 }
 .shoppingCart{
     text-decoration: none;
     color: white;
     display: flex;
     align-items: center;
+    position: relative;
+    margin-right: 10px;
 }
 .header-name{
     margin-left: 5px;
 }
 .shoppingCartText{
-    margin-right: 5px;
+    font-weight: 700;
+    z-index: 7;
+    color: orange;
+}
+
+.dropdownGreetingButton {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    // border-radius: 25px;
+    padding: 12px 16px;
+    z-index: 7;
+}
+.dropdown {
+    position: relative;
+    display: block;
+}
+.dropdown:hover .dropdownGreetingButton{
+    display: block;
 }

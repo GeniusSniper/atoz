@@ -5,8 +5,11 @@ import SearchBar from './searchBar';
 const Greeting = ({ currentUser, logout }) => {
   const navbar = () => (
     <div className='dropdown'>
-      <span className="header-name">Welcome to my page, Log in</span>
-      <div className='dropdown-greetingButton'>
+      <div className='header-name'>
+        <span className="name">Welcome to my page, </span>
+        <div className='headerName'>Log in</div>
+      </div>
+      <div className='dropdownGreetingButton'>
         <Link to="/login" className='header-button'><button className='loginButton'>Log in</button></Link>
         <br />
         <span className='signUP'>New customer?
@@ -18,7 +21,7 @@ const Greeting = ({ currentUser, logout }) => {
   const welcoming = () => (
     <div className="dropdown">
       <span className="header-name">Welcome to my page, {currentUser.username}</span>
-      <div className='dropdown-greetingButton'>
+      <div className='dropdownGreetingButton'>
         <button className="loginButton" onClick={logout}>Log Out</button>
       </div>
     </div>
@@ -40,7 +43,7 @@ const Greeting = ({ currentUser, logout }) => {
                 alt="Cart" 
                 className='shoppingCartIcon'
               />
-              <div className='shoppingCartText'>Cart</div>
+              <div className='shoppingCartText'>0</div>
             </Link>
           </div>
         </div>
