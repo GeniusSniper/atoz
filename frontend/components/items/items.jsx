@@ -26,16 +26,16 @@ class Items extends React.Component{
             </div>
         );
         return(
-            <>
-                <div className='zIndex'>
+            <div className='homePage'>
+                {/* <div className='zIndex'> */}
                     <div className='mainPageImgBox'>
-                        <img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/deals.jpg" alt="main page" className='mainPageImg'/>
+                        <img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/homeBackground.jpg" alt="main page" className='mainPageImg'/>
                     </div>
-                </div>
+                {/* </div> */}
                 <div className='mainPageSession'>
                     {allItem}
                 </div>
-            </>
+            </div>
         )
     }
 };

@@ -50,7 +50,6 @@
     display: flex;
     align-items: center;
     position: relative;
-    margin-right: 10px;
 }
 .header-name{
     margin-left: 5px;
@@ -77,4 +76,7 @@
 }
 .dropdown:hover .dropdownGreetingButton{
     display: block;
+}
+.navCartButton{
+    margin-right: 45px;
 }
