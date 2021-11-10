@@ -29,12 +29,12 @@ class Item extends React.Component{
             this.props.addingToCart(this.props.user.cart);
         } else {
             if(this.props.cart[this.props.itemId]){
-                this.props.cart[this.props.itemid].qty = parseInt(this.state.qty) + parseInt(this.props.cart[this.props.itemId].qty);
+                this.props.cart[this.props.itemId].qty = parseInt(this.state.qty) + parseInt(this.props.cart[this.props.itemId].qty);
             } else {
                 this.props.item.qty = parseInt(this.state.qty);
                 this.props.cart[this.props.itemId] = this.props.item;
             }
-            this.props.addToCart(this.props.cart);
+            localStorage.setItem('cart', JSON.stringify(this.props.cart));
         }
         window.location.replace("/#/cart");
     }

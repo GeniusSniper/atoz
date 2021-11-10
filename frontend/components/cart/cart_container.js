@@ -8,7 +8,7 @@ const mst = state => {
         user = state.entities.users[state.session.id];
         cart = Object.values(user.cart);
     } else {
-        cart = Object.values(state.session.cart);
+        cart = Object.values(JSON.parse(localStorage.getItem('cart'))) || {};
     }
     return ({
         cart,

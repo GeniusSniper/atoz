@@ -5,7 +5,6 @@ export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const REMOVE_ERRORS = 'REMOVE_ERRORS';
 export const ADD_ITEM = 'ADD_ITEM';
-export const CLEAR_CART = 'CLEAR_CART';
 
 export const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -24,19 +23,6 @@ export const receiveErrors = errors => ({
 export const errors = () =>({
   type: REMOVE_ERRORS
 });
-
-export const addItem = cart => ({
-  type: ADD_ITEM,
-  cart
-});
-
-export const clearCart = () => ({
-  type: CLEAR_CART
-});
-
-export const addToCart = cart => dispatch => (
-  dispatch(addItem(cart))
-);
 
 export const clearItems = () => dispatch => (
   dispatch(clearCart())

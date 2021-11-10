@@ -10,7 +10,7 @@ const mst = (state, props) => {
     const reviews = selectReviewsForItem(state.entities, item);
     let user;
     if(state.session.id) user = state.entities.users[state.session.id];
-    let cart = state.session.cart;
+    let cart = JSON.parse(localStorage.getItem('cart')) || {};
     return {
         itemId,
         item,
@@ -23,7 +23,6 @@ const mdt = dispatch => ({
     needItem: itemId => dispatch(needItem(itemId)),
     // deleteReview: reviewId => dispatch(deleteItemReview(reviewId)),
     addingToCart: cart => dispatch(updateCart(cart)),
-    addToCart: cart => dispatch(addToCart(cart)),
 });
 
 export default connect(mst,mdt)(item);
