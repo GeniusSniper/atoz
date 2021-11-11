@@ -12,6 +12,7 @@ class Cart extends React.Component{
         if(this.props.user){
             this.props.user.cart[i] = undefined;
             this.props.updateCart(this.props.user.cart);
+            localStorage.setItem('cart', JSON.stringify({}));
         } else {
             this.props.cart[i] = undefined;
             localStorage.setItem('cart', JSON.stringify(this.props.cart));

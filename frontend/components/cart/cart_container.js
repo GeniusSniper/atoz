@@ -3,14 +3,15 @@ import { updateCart } from '../../actions/session_action';
 import Cart from './cart';
 
 const mst = state => {
-    let cart = [], user;
+    let cart = {}, user;
+    if(localStorage.getItem('cart')){
+        cart = JSON.parse(localStorage.getItem('cart'));
+    }
     if(state.session.id){
         user = state.entities.users[state.session.id];
-        cart = user.cart;
-    } else {
-        if(localStorage.getItem('cart')){
-            cart = JSON.parse(localStorage.getItem('cart'));
-        }
+        Object.values(user.cart).forEach(obj => {
+            cart[obj.id] ? cart[obj.id].qty += parseInt(cart[obj.id].qty) + parseInt(obj.qty) : cart[obj.id] = obj;
+        })
     }
     return ({
         cart,

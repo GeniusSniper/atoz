@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from './searchBar';
 
-const Greeting = ({ currentUser, logout }) => {
+const Greeting = ({ currentUser, logout, cartTotal }) => {
   const navbar = () => (
     <div className='dropdown'>
       <div className='header-name'>
@@ -43,7 +43,7 @@ const Greeting = ({ currentUser, logout }) => {
                 alt="Cart" 
                 className='shoppingCartIcon'
               />
-              <div className='shoppingCartText'>{this.props.cartTotal}</div>
+              <div className='shoppingCartText'>{cartTotal}</div>
             </Link>
           </div>
         </div>
