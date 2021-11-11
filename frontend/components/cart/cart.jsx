@@ -63,92 +63,120 @@ class Cart extends React.Component {
                 </Link>
                 <div className="cartEachItemQt">
                   <div className="dropdowns">
-                    <select className="itemQtyDropdown">
-                      <option style={{ display: "none" }}>
-                        Qty: {item.qty}
-                      </option>
-                      <option
-                        className="itemQtyDropdownOption"
-                        onClick={() => {
-                          this.deleteItem(item.id);
+                    {!this.state[item.id] && this.state[item.id] !== 0 ? (
+                      <select className="itemQtyDropdown">
+                        <option style={{ display: "none" }}>
+                          Qty: {item.qty}
+                        </option>
+                        <option
+                          className="itemQtyDropdownOption"
+                          onClick={() => {
+                            this.deleteItem(item.id);
+                          }}
+                        >
+                          0 (Delete)
+                        </option>
+                        <option
+                          className="itemQtyDropdownOption"
+                          onClick={() => {
+                            this.updateQty(item.id, 1);
+                          }}
+                        >
+                          1
+                        </option>
+                        <option
+                          className="itemQtyDropdownOption"
+                          onClick={() => {
+                            this.updateQty(item.id, 2);
+                          }}
+                        >
+                          2
+                        </option>
+                        <option
+                          className="itemQtyDropdownOption"
+                          onClick={() => {
+                            this.updateQty(item.id, 3);
+                          }}
+                        >
+                          3
+                        </option>
+                        <option
+                          className="itemQtyDropdownOption"
+                          onClick={() => {
+                            this.updateQty(item.id, 4);
+                          }}
+                        >
+                          4
+                        </option>
+                        <option
+                          className="itemQtyDropdownOption"
+                          onClick={() => {
+                            this.updateQty(item.id, 5);
+                          }}
+                        >
+                          5
+                        </option>
+                        <option
+                          className="itemQtyDropdownOption"
+                          onClick={() => {
+                            this.updateQty(item.id, 6);
+                          }}
+                        >
+                          6
+                        </option>
+                        <option
+                          className="itemQtyDropdownOption"
+                          onClick={() => {
+                            this.updateQty(item.id, 7);
+                          }}
+                        >
+                          7
+                        </option>
+                        <option
+                          className="itemQtyDropdownOption"
+                          onClick={() => {
+                            this.updateQty(item.id, 8);
+                          }}
+                        >
+                          8
+                        </option>
+                        <option
+                          className="itemQtyDropdownOption"
+                          onClick={() => {
+                            this.updateQty(item.id, 9);
+                          }}
+                        >
+                          9
+                        </option>
+                        <option
+                          className="itemQtyDropdownOption"
+                          onClick={() => this.setState({ [item.id]: item.qty })}
+                        >
+                          10+
+                        </option>
+                      </select>
+                    ) : (
+                      <form
+                        onSubmit={(e) => {
+                          this.state[item.id] === 0
+                            ? this.deleteItem(item.id)
+                            : this.updateQty(item.id, this.state[item.id]);
                         }}
                       >
-                        0 (Delete)
-                      </option>
-                      <option
-                        className="itemQtyDropdownOption"
-                        onClick={() => {
-                          this.updateQty(item.id, 1);
-                        }}
-                      >
-                        1
-                      </option>
-                      <option
-                        className="itemQtyDropdownOption"
-                        onClick={() => {
-                          this.updateQty(item.id, 2);
-                        }}
-                      >
-                        2
-                      </option>
-                      <option
-                        className="itemQtyDropdownOption"
-                        onClick={() => {
-                          this.updateQty(item.id, 3);
-                        }}
-                      >
-                        3
-                      </option>
-                      <option
-                        className="itemQtyDropdownOption"
-                        onClick={() => {
-                          this.updateQty(item.id, 4);
-                        }}
-                      >
-                        4
-                      </option>
-                      <option
-                        className="itemQtyDropdownOption"
-                        onClick={() => {
-                          this.updateQty(item.id, 5);
-                        }}
-                      >
-                        5
-                      </option>
-                      <option
-                        className="itemQtyDropdownOption"
-                        onClick={() => {
-                          this.updateQty(item.id, 6);
-                        }}
-                      >
-                        6
-                      </option>
-                      <option
-                        className="itemQtyDropdownOption"
-                        onClick={() => {
-                          this.updateQty(item.id, 7);
-                        }}
-                      >
-                        7
-                      </option>
-                      <option
-                        className="itemQtyDropdownOption"
-                        onClick={() => {
-                          this.updateQty(item.id, 8);
-                        }}
-                      >
-                        8
-                      </option>
-                      <option
-                        className="itemQtyDropdownOption"
-                        onClick={() => {
-                          this.updateQty(item.id, 9);
-                        }}
-                      >
-                        9
-                      </option>
-                      <option className="itemQtyDropdownOption">10+</option>
-                    </select>
+                        <input
+                          type="text"
+                          value={this.state[item.id]}
+                          onChange={(e) => {
+                            e.preventDefault();
+                            this.setState({
+                              [item.id]: parseInt(e.target.value) || 0,
+                            });
+                          }}
+                          className='cartUpdateText'
+                        />
+                        <button className='cartUpdateButton'>Update</button>
+                      </form>
+                    )}
                     {/* <div
                       className="cartEachItemQt1"
                       onClick={() => {
@@ -226,6 +254,7 @@ let priceToS = (num) => {
       str += arr[0][i];
     }
   }
+  if(arr.length === 1) return str += '.00'
   str += "." + arr[1].substring(0, 2);
   return str;
 };

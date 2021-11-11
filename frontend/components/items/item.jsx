@@ -40,7 +40,9 @@ class Item extends React.Component {
       localStorage.setItem("cart", JSON.stringify(this.props.cart));
     }
     window.location.replace("/#/cart");
-    window.location.reload(false);
+    setTimeout(() => {
+      window.location.reload(false);
+    }, 500);
   }
 
   render() {

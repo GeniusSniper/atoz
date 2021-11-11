@@ -78,9 +78,8 @@
   border-radius: 20px;
   background-color: rgb(247, 227, 49);
   width: 100%;
-  font-size: large;
   margin: 10px 0;
-  padding: 2px 0;
+  padding: 4px 5px;
   cursor: pointer;
 }
 .cartEachItemLink {
@@ -148,6 +147,18 @@
 }
 .itemQtyDropdownOption:hover {
   background-color: rgba(240, 242, 242, 0.5);
+}
+.cartUpdateText{
+    width: 100px;
+    font-size: 13px;
+    line-height: 19px;
+    border-radius: 5px;
+}
+.cartUpdateButton {
+  padding: 2px 5px;
+  margin: 0 5px;
+  border-radius: 7px;
+  background-color: rgb(247, 227, 49);
 }
 // .shoppingCart {
 //     display: flex;
