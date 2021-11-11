@@ -6,6 +6,7 @@ class Cart extends React.Component{
         super(props);
 
         this.deleteItem = this.deleteItem.bind(this);
+
     }
 
     deleteItem(i){
@@ -18,6 +19,10 @@ class Cart extends React.Component{
             localStorage.setItem('cart', JSON.stringify(this.props.cart));
             window.location.reload(false);
         }
+    }
+
+    updateQty(id, qty){
+        
     }
 
     render(){

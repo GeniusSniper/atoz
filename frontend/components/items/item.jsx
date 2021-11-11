@@ -17,8 +17,7 @@ class Item extends React.Component{
         this.props.needItem(this.props.match.params.itemId);
     }
 
-    adding_to_cart(e){
-        e.preventDefault();
+    adding_to_cart(){
         if(this.props.user){
             if(this.props.user.cart[this.props.itemId]){
                 this.props.user.cart[this.props.itemId].qty = parseInt(this.state.qty) + parseInt(this.props.user.cart[this.props.itemId].qty);
@@ -37,6 +36,7 @@ class Item extends React.Component{
             localStorage.setItem('cart', JSON.stringify(this.props.cart));
         }
         window.location.replace("/#/cart");
+        window.location.reload(false);
     }
 
     render(){
