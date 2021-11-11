@@ -10,7 +10,7 @@ const mst = state => {
     if(state.session.id){
         user = state.entities.users[state.session.id];
         Object.values(user.cart).forEach(obj => {
-            cart[obj.id] ? cart[obj.id].qty += parseInt(cart[obj.id].qty) + parseInt(obj.qty) : cart[obj.id] = obj;
+            cart[obj.id] ? cart[obj.id].qty = parseInt(cart[obj.id].qty) + parseInt(obj.qty) : cart[obj.id] = obj;
         })
     }
     return ({
