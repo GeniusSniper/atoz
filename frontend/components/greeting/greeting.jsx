@@ -43,7 +43,7 @@ const Greeting = ({ currentUser, logout }) => {
                 alt="Cart" 
                 className='shoppingCartIcon'
               />
-              <div className='shoppingCartText'>0</div>
+              <div className='shoppingCartText'>{this.props.cartTotal}</div>
             </Link>
           </div>
         </div>
