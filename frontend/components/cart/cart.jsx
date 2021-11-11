@@ -9,14 +9,20 @@ class Cart extends React.Component{
     }
 
     deleteItem(i){
-        this.props.user.cart[i] = undefined;
-        this.props.updateCart(this.props.user.cart);
+        if(this.props.user){
+            this.props.user.cart[i] = undefined;
+            this.props.updateCart(this.props.user.cart);
+        } else {
+            this.props.cart[i] = undefined;
+            localStorage.setItem('cart', JSON.stringify(this.props.cart));
+            window.location.reload(false);
+        }
     }
 
     render(){
         // if(!this.props.cart) return null;
         let totalItem = 0, totalPrice = 0.00;
-        let items = this.props.cart.map( item => {
+        let items = Object.values(this.props.cart).map( item => {
             totalItem += parseInt(item.qty);
             totalPrice += parseFloat(item.item_price) * parseFloat(item.qty);
             return (
