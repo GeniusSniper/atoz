@@ -1,82 +1,90 @@
 .navBar {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    position: static;
-    z-index: 5;
-    background-color: rgb(15, 17, 17);
-    min-width: 1000px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: static;
+  z-index: 5;
+  background-color: rgb(15, 17, 17);
+  min-width: 1000px;
 }
-.navLeft{
-    display: flex;
-    position: static;
-    float: none;
-    margin-right: 5px;
+.navLeft {
+  display: flex;
+  position: static;
+  float: none;
+  margin-right: 5px;
 }
-.logo{
-    width: 100px;
-    object-fit: contain;
-    margin: 0 20px;
-    margin-top: 18px;
+.logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
 }
-.loginButton{
-    padding: 5px;
+.loginButton {
+  padding: 2px 5px;
+  text-decoration: none;
+  background-color: rgb(247, 227, 49);
+//   white-space: nowrap;
+  border-radius: 25px;
+  cursor: pointer;
 }
 // .navLeft:hover{
 //     border: .1px inset white;
 // }
-.navEnd{
-    display: flex;
-    align-items: center;
+.navEnd {
+  display: flex;
+  align-items: center;
 }
-.headerName{
-    font-weight: 700;
+.headerName {
+  font-weight: 700;
 }
 // .shoppingCart:hover{
 //     border: .1 inset white;
 // }
-.shoppingCartIcon{
-    height: 60px;
-    position: absolute;
-    bottom: -4454px;
-    left: -4444px;
-    margin: auto;
-    right: -4444px;
-    top: -4444px;
+.shoppingCartIcon {
+  height: 60px;
+  position: absolute;
+  bottom: -4454px;
+  left: -4444px;
+  margin: auto;
+  right: -4444px;
+  top: -4444px;
 }
-.shoppingCart{
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    position: relative;
+.shoppingCart {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-.header-name{
-    margin-left: 5px;
+.header-name {
+  margin-left: 5px;
+  white-space: nowrap;
+  margin-right: 2em;
+  color: rgb(255, 255, 255);
 }
-.shoppingCartText{
-    font-weight: 700;
-    z-index: 7;
-    color: orange;
+.shoppingCartText {
+  font-weight: 700;
+  z-index: 7;
+  color: orange;
 }
 
 .dropdownGreetingButton {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    // border-radius: 25px;
-    padding: 12px 16px;
-    z-index: 7;
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  // border-radius: 25px;
+  padding: 12px 16px;
+  z-index: 7;
 }
 .dropdown {
-    position: relative;
-    display: block;
+  position: relative;
+  display: block;
 }
-.dropdown:hover .dropdownGreetingButton{
-    display: block;
+.dropdown:hover .dropdownGreetingButton {
+  display: block;
 }
-.navCartButton{
-    margin-right: 45px;
+.navCartButton {
+  margin-right: 45px;
 }

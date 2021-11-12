@@ -6,7 +6,7 @@ import SessionForm from './session_form';
 
 const mst = ({ errors }) => ({
   errors: errors.session,
-  formType: 'signup',
+  formType: 'Create account',
   msg: 'Create your AtoZ account',
   navLink: <Link to="/login" className='redirectButton'><button className='formTypeLink'>Sign-In</button></Link>,
   formTypeMsg: 'Already have an account?'
