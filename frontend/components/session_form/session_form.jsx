@@ -82,11 +82,14 @@ class SessionForm extends React.Component {
       );
     } else {
       demo_user = () => (
-        <form className="demo" onSubmit={this.handleSubmit}>
-          <button onClick={this.setdemo} className="demoButton">
-            Demo User
-          </button>
-        </form>
+        <>
+          <div>or</div>
+          <form className="demo" onSubmit={this.handleSubmit}>
+            <button onClick={this.setdemo} className="formTypeLink">
+              Demo User
+            </button>
+          </form>
+        </>
       );
     }
     return (
@@ -130,11 +133,13 @@ class SessionForm extends React.Component {
             </button>
           </form>
         </div>
-        <div className='forTypeDiv'>
-          <div className="formTypeMsg">{this.props.formTypeMsg}</div>
+        <div className="forTypeDiv">
+          <div className="divline">
+            <div className="formTypeMsg">{this.props.formTypeMsg}</div>
+          </div>
+          <div>{this.props.navLink}</div>
+          {demo_user()}
         </div>
-        <div>{this.props.navLink}</div>
-        {demo_user()}
       </div>
     );
   }
