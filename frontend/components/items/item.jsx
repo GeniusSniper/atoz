@@ -89,57 +89,108 @@ class Item extends React.Component {
             <div className="midSessionBox">
               <div className="midSessionFlex">
                 <h1 className="eachItemTitle">{item.item_name}</h1>
-                <p className="eachItemPrice">
-                  ${priceToS("" + item.item_price)}
+                <p className="eachItemPrice price">
+                  Price: ${priceToS("" + item.item_price)}
                 </p>
-                <p className="itemDescrption">{item.descrption}</p>
+                <div className="itemDescrption">
+                  <div>About this Item</div>
+                  {item.descrption}
+                </div>
               </div>
             </div>
           </div>
           <div className="rightSession">
             <div className="rightSessionBox">
               <div className="rightSessionFlex">
-                <p className="eachItemPrice">
-                  ${priceToS("" + item.item_price)}
-                </p>
+                <div className="eachItemPrice">
+                  Buy Now:
+                  <div className="price">${priceToS("" + item.item_price)}</div>
+                </div>
                 {/* <p>numbers of item left: {item.num_of_item_left}</p> */}
                 <div className="dropdowns">
-                  <label htmlFor="">Qty:</label>
-                  <select
-                    name="qty"
-                    id="qty"
-                    value={this.state.value}
-                    onChange={(e) => this.setState({ qty: e.target.value })}
-                    className="itemQtyDropdown"
-                  >
-                    <option className="itemQtyDropdownOption" value={1}>
+                  <label>Qty:</label>
+                  <select className="itemQtyDropdown">
+                    {/* <option style={{display: 'none'}} selected>
+                      Qty: {this.state.qty}
+                    </option> */}
+                    <option
+                      className="itemQtyDropdownOption"
+                      onClick={() => {
+                        this.setState({ qty: 1 });
+                      }}
+                    >
                       1
                     </option>
-                    <option className="itemQtyDropdownOption" value={2}>
+                    <option
+                      className="itemQtyDropdownOption"
+                      onClick={() => {
+                        this.setState({ qty: 2 });
+                      }}
+                    >
                       2
                     </option>
-                    <option className="itemQtyDropdownOption" value={3}>
+                    <option
+                      className="itemQtyDropdownOption"
+                      onClick={() => {
+                        this.setState({ qty: 3 });
+                      }}
+                    >
                       3
                     </option>
-                    <option className="itemQtyDropdownOption" value={4}>
+                    <option
+                      className="itemQtyDropdownOption"
+                      onClick={() => {
+                        this.setState({ qty: 4 });
+                      }}
+                    >
                       4
                     </option>
-                    <option className="itemQtyDropdownOption" value={5}>
+                    <option
+                      className="itemQtyDropdownOption"
+                      onClick={() => {
+                        this.setState({ qty: 5 });
+                      }}
+                    >
                       5
                     </option>
-                    <option className="itemQtyDropdownOption" value={6}>
+                    <option
+                      className="itemQtyDropdownOption"
+                      onClick={() => {
+                        this.setState({ qty: 6 });
+                      }}
+                    >
                       6
                     </option>
-                    <option className="itemQtyDropdownOption" value={7}>
+                    <option
+                      className="itemQtyDropdownOption"
+                      onClick={() => {
+                        this.setState({ qty: 7 });
+                      }}
+                    >
                       7
                     </option>
-                    <option className="itemQtyDropdownOption" value={8}>
+                    <option
+                      className="itemQtyDropdownOption"
+                      onClick={() => {
+                        this.setState({ qty: 8 });
+                      }}
+                    >
                       8
                     </option>
-                    <option className="itemQtyDropdownOption" value={9}>
+                    <option
+                      className="itemQtyDropdownOption"
+                      onClick={() => {
+                        this.setState({ qty: 9 });
+                      }}
+                    >
                       9
                     </option>
-                    <option className="itemQtyDropdownOption" value={10}>
+                    <option
+                      className="itemQtyDropdownOption"
+                      onClick={() => {
+                        this.setState({ qty: 10 });
+                      }}
+                    >
                       10
                     </option>
                   </select>

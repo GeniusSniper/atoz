@@ -12,7 +12,7 @@ json.item do
   
     json.users do
       json.set! review.user.id do
-        json.extract! review.user, :id, :username
+        json.extract! review.user, :id, :username, :cart
       end
     end
   end

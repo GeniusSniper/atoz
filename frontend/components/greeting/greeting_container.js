@@ -2,22 +2,22 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session_action';
 import Greeting from './greeting';
 
-const mst = ({ session, entities: { users } }) => {
+const mst = (state) => {
   let cartTotal = 0;
   let cart = {};
   if(localStorage.getItem('cart')){
     cart = JSON.parse(localStorage.getItem('cart'));
+    Object.values(cart).forEach(obj => {
+      cartTotal += parseInt(obj.qty);
+    })
   }
-  Object.values(cart).forEach(obj => {
-    cartTotal += parseInt(obj.qty);
-  })
-  if(session.id){
-    Object.values(users[session.id].cart).forEach(obj => {
+  if(state.session.id){
+    Object.values(state.entities.users[state.session.id].cart).forEach(obj => {
       cartTotal += parseInt(obj.qty);
     })
   }
   return ({
-    currentUser: users[session.id],
+    currentUser: state.entities.users[state.session.id],
     cartTotal
 })};
 
