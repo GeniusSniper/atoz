@@ -1,6 +1,5 @@
 .eachItem {
   display: block;
-  line-height: 40px;
   min-width: 1000px;
   max-width: 1500px;
   margin: 0 auto;
@@ -24,6 +23,8 @@
   //   margin: 0 5%;
   flex: 0.5;
   margin: 0 10px;
+  line-height: 20px;
+  font-size: 14px;
 }
 
 .midSessionBox {
@@ -38,6 +39,7 @@
 .rightSession {
   float: right;
   width: 244px;
+  line-height: 40px;
   margin-left: 20px;
 }
 
@@ -116,6 +118,8 @@
 .eachItemTitle {
   font-weight: 400;
   font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 5px;
 }
 
 .purchaseButton {
@@ -137,8 +141,10 @@
   margin-left: 10px;
 }
 .eachItemPrice {
+  margin: 5px 0;
   display: flex;
   justify-content: space-between;
+  font-size: 18px;
 }
 .price {
   color: rgb(163, 2, 2);
@@ -152,4 +158,8 @@
   line-height: 19px;
   margin-top: 0;
   margin-bottom: 14px;
+}
+.itemAbout {
+  font-size: 16px;
+  line-height: 24px;
 }

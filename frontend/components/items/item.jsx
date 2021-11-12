@@ -89,13 +89,12 @@ class Item extends React.Component {
             <div className="midSessionBox">
               <div className="midSessionFlex">
                 <h1 className="eachItemTitle">{item.item_name}</h1>
+                <div className="lineBreak"></div>
                 <p className="eachItemPrice price">
                   Price: ${priceToS("" + item.item_price)}
                 </p>
-                <div className="itemDescrption">
-                  <div>About this Item</div>
-                  {item.descrption}
-                </div>
+                <div className="itemAbout">About this Item</div>
+                <div className="itemDescrption">{item.descrption}</div>
               </div>
             </div>
           </div>
