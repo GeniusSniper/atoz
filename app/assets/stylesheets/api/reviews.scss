@@ -1,63 +1,62 @@
 .reviewSession {
-    display: flex;
-    flex-direction: row;
-    line-height: 40px;
-    font-size: 24px;
-    white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  margin: 10px;
+  justify-content: space-between;
 }
 .requstingReview {
-    display: block;
-    padding-right: 10%;
+  display: block;
+  flex: 0.2;
 }
 .reviewThisProduct {
-    font-size: 40;
-    font-weight: bold;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
 }
 .createReviewButton {
-    font-size: 24px;
-    padding: 1% 5% 1%;
-    border-radius: 15px;
-    cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  height: 29px;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  background-color: white;
+  cursor: pointer;
 }
 .allReviews {
-    display: flex;
-    flex-direction: column;
+  flex: 0.74;
+  display: flex;
+  flex-direction: column;
+  max-width: 80em;
 }
 .eachUserReview {
-    display: block;
-    padding: 5% 5% 20% 5%;
-    margin-bottom: 5%;
+  display: block;
+  margin-bottom: 5%;
+}
+.reviewUsernameSession {
+  margin-bottom: 4px;
+}
+.reviewUserAvatar {
+  padding-right: 9px;
+  width: 43px;
 }
 .eachReviewUsername {
-    font-size: 40;
-    font-weight: bold;
+    font-size: 13px;
+}
+.rewviewTitle{
+    font-weight: 700px;
+}
+.reviewButtons{
+    background-color: white;
+  font-size: 17px;
+    line-height: 20px;
+    width: 100px;
+    border-radius: 8px;
+    margin-right: 10px;
 }
 .permission {
-    display: flex;
-    justify-content: flex-start;
-}
-.permission button {
-    font-size: 17px;
-}
-.textarea {
-    resize: none;
-    width: 100%;
-}
-.centeredForm {
-    display: flex;
-    flex-direction: column;
-}
-.reviewFormTitle{
-    font-size: 35px;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-.reviewForm {
-    width: 768px;
-    margin: 0 auto;
-    line-height: 30px;
-}
-.reviewFormButton, .cancelReviewButton {
-    background-color: orange;
-    border-radius: 25px;
+  display: flex;
+  justify-content: flex-start;
 }

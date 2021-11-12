@@ -6,7 +6,7 @@ import ReviewForm from './review_form';
 const mst = (state, props) => {
   return ({
   review: state.entities.reviews[props.match.params.reviewId],
-  formType: 'edit'
+  formType: 'Edit'
 })};
 
 const mdt = dispatch => ({

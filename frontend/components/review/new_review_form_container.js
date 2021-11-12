@@ -8,7 +8,7 @@ const mst = state => ({
     raing: 5,
     body: ''
   },
-  formType: 'create'
+  formType: 'Create'
 })
 
 const mdt = dispatch => ({

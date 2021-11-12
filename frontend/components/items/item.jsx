@@ -203,6 +203,7 @@ class Item extends React.Component {
             </div>
           </div>
         </div>
+        <div className="lineBreak"></div>
         <div className="reviewSession">
           <div className="requstingReview">
             <h1 className="reviewThisProduct">Review this product</h1>
