@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import Rating from "react-rating";
 
 class ReviewForm extends React.Component {
   constructor(props) {
@@ -44,10 +45,18 @@ class ReviewForm extends React.Component {
             <div className="reviewFormTitle">
               {this.props.formType}&nbsp;Review
             </div>
-            <div className="lineBreak"></div>
+            <div className="reviewLinebreak"></div>
             <div className="reviewFormRating">
               <div className="reviewFromRatingText">Rating</div>
-              <label>
+              <Rating
+                emptySymbol={
+                  <img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/star_empty.png" className="icon" />
+                }
+                fullSymbol={
+                  <img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/star_full.png" className="icon" />
+                }
+              />
+              {/* <label>
                 1
                 <input
                   type="radio"
@@ -91,9 +100,9 @@ class ReviewForm extends React.Component {
                   onClick={this.update("rating")}
                   name="radioButton"
                 />
-              </label>
+              </label> */}
             </div>
-            <div className="lineBreak"></div>
+            <div className="reviewLinebreak"></div>
             <div className="headLine">
               <div className="addHeadline">Add a headline</div>
               <input
@@ -102,7 +111,7 @@ class ReviewForm extends React.Component {
                 className="headlinetext"
               />
             </div>
-            <div className="lineBreak"></div>
+            <div className="reviewLinebreak"></div>
             <div className="reviewFormComment">
               <div className="reviewAddText">Add a written review</div>
               <textarea

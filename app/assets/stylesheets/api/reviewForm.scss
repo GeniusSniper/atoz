@@ -56,8 +56,8 @@
   margin-bottom: 10px;
 }
 .reviewFormSubmitButton {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 .reviewFormButton {
   background: #ffd814;
@@ -69,4 +69,13 @@
   display: block;
   position: relative;
   line-height: 29px;
+}
+.reviewLinebreak {
+  background-color: transparent;
+  display: block;
+  height: 1px;
+  border-width: 0;
+  border-top: 1px solid rgb(153, 139, 139);
+  line-height: 19px;
+  margin-top: 0;
 }
