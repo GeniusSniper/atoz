@@ -10,6 +10,7 @@ import EditFormContainer from './review/edit_review_form_container';
 import search_container from './search/search_container';
 import NotFound from './notFound';
 import cart_container from './cart/cart_container';
+import Checkout from './checkout/checkout';
 
 //containing routes and render the correct info 
 const App = () => (
@@ -21,7 +22,8 @@ const App = () => (
             <ProtectedRoute exact path='/items/:itemId/review/new' component={ReviewFormContainer}/>
             <ProtectedRoute exact path='/items/:itemId/:reviewId/edit' component={EditFormContainer}/>
             <Route exact path='/search/:keyword' component={search_container}/>
-            <Route path='/cart' component={cart_container}></Route>
+            <Route exact path='/cart' component={cart_container} />
+            <Route exact path='/checkout' component={Checkout} />
             {/* <Route path='/' component={NotFound}></Route> */}
         </Switch>
     </div>
