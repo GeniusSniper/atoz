@@ -12,12 +12,15 @@ class ReviewForm extends React.Component {
 
   navigateToItemShow() {
     this.props.history.push(`/items/${this.props.match.params.itemId}`);
+    setTimeout(() => {
+      window.location.reload(false);
+    }, 500);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     let review;
-    if (this.props.formType === "create") {
+    if (this.props.formType === "Create") {
       review = Object.assign({}, this.state, {
         item_id: parseInt(this.props.match.params.itemId),
       });
@@ -38,6 +41,21 @@ class ReviewForm extends React.Component {
 
   render() {
     document.title = "Review Your Purchases";
+    if (!this.props.review) {
+      return (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h1 style={{ fontWeight: 700, fontSize: "24px", margin: "10px" }}>
+            Session Expired
+          </h1>
+        </div>
+      );
+    }
     return (
       <div className="reviewForm">
         <div className="centeredForm">
@@ -49,66 +67,33 @@ class ReviewForm extends React.Component {
             <div className="reviewFormRating">
               <div className="reviewFromRatingText">Rating</div>
               <Rating
+                initialRating={this.state.rating}
                 emptySymbol={
-                  <img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/star_empty.png" className="icon" />
+                  <img
+                    src="https://atoz-seeds.s3.us-east-2.amazonaws.com/star_empty.png"
+                    className="icon"
+                  />
                 }
                 fullSymbol={
-                  <img src="https://atoz-seeds.s3.us-east-2.amazonaws.com/star_full.png" className="icon" />
+                  <img
+                    src="https://atoz-seeds.s3.us-east-2.amazonaws.com/star_full.png"
+                    className="icon"
+                  />
                 }
+                onChange={(value) => {
+                  this.setState({ rating: value });
+                }}
               />
-              {/* <label>
-                1
-                <input
-                  type="radio"
-                  value={1}
-                  onClick={this.update("rating")}
-                  name="radioButton"
-                />
-              </label>
-              <label>
-                2
-                <input
-                  type="radio"
-                  value={2}
-                  onClick={this.update("rating")}
-                  name="radioButton"
-                />
-              </label>
-              <label>
-                3
-                <input
-                  type="radio"
-                  value={3}
-                  onClick={this.update("rating")}
-                  name="radioButton"
-                />
-              </label>
-              <label>
-                4
-                <input
-                  type="radio"
-                  value={4}
-                  onClick={this.update("rating")}
-                  name="radioButton"
-                />
-              </label>
-              <label>
-                5
-                <input
-                  type="radio"
-                  value={5}
-                  onClick={this.update("rating")}
-                  name="radioButton"
-                />
-              </label> */}
             </div>
             <div className="reviewLinebreak"></div>
             <div className="headLine">
               <div className="addHeadline">Add a headline</div>
               <input
                 type="text"
+                value={this.state.headline}
                 placeholder="What's most important to know"
                 className="headlinetext"
+                onChange={this.update("headline")}
               />
             </div>
             <div className="reviewLinebreak"></div>

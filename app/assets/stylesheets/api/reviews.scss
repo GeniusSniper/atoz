@@ -43,20 +43,26 @@
   width: 43px;
 }
 .eachReviewUsername {
-    font-size: 13px;
+  font-size: 13px;
 }
-.rewviewTitle{
-    font-weight: 700px;
-}
-.reviewButtons{
-    background-color: white;
+.rewviewTitle {
+  font-weight: 700;
   font-size: 17px;
-    line-height: 20px;
-    width: 100px;
-    border-radius: 8px;
-    margin-right: 10px;
+  margin-left: 10px;
+}
+.reviewButtons {
+  background-color: white;
+  font-size: 17px;
+  line-height: 20px;
+  width: 100px;
+  border-radius: 8px;
+  margin-right: 10px;
 }
 .permission {
   display: flex;
   justify-content: flex-start;
+}
+.reviewRaitingSession {
+  display: flex;
+  align-items: center;
 }

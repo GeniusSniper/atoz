@@ -22,6 +22,8 @@ User.destroy_all
 User.reset_pk_sequence
 Item.destroy_all
 Item.reset_pk_sequence
+Review.destroy_all
+Review.reset_pk_sequence
 
 User.create!( username: 'Demo', password: '******', email: 'demo@demo.com', address: 'Demo City');
 

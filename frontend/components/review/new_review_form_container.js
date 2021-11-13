@@ -5,7 +5,8 @@ import ReviewForm from './review_form';
 
 const mst = state => ({
   review: {
-    raing: 5,
+    raing: 0,
+    headline: '',
     body: ''
   },
   formType: 'Create'
