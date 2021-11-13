@@ -8,17 +8,21 @@ class ReviewForm extends React.Component {
     this.state = this.props.review;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToItemShow = this.navigateToItemShow.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   navigateToItemShow() {
     this.props.history.push(`/items/${this.props.match.params.itemId}`);
-    setTimeout(() => {
-      window.location.reload(false);
-    }, 500);
+    if (this.props.formType === "Edit") {
+      setTimeout(() => {
+        window.location.reload(false);
+      }, 500);
+    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.removeErrors();
     let review;
     if (this.props.formType === "Create") {
       review = Object.assign({}, this.state, {
@@ -32,7 +36,25 @@ class ReviewForm extends React.Component {
       });
       this.props.updateReview(review);
     }
-    this.navigateToItemShow();
+    setTimeout(() => {
+      if (this.props.errors.length === 0) {
+        this.navigateToItemShow();
+      }
+    }, 500);
+  }
+
+  renderErrors() {
+    return (
+      <>
+        <ul className="errorMsgs">
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`} className="errorMsg">
+              {error}
+            </li>
+          ))}
+        </ul>
+      </>
+    );
   }
 
   update(property) {
@@ -41,7 +63,7 @@ class ReviewForm extends React.Component {
 
   render() {
     document.title = "Review Your Purchases";
-    if (!this.props.review) {
+    if (!this.props.item) {
       return (
         <div
           style={{
@@ -61,6 +83,7 @@ class ReviewForm extends React.Component {
         <div className="centeredForm">
           <form onSubmit={this.handleSubmit} className="reviewFormPage">
             <div className="reviewFormTitle">
+              {this.renderErrors()}
               {this.props.formType}&nbsp;Review
             </div>
             <div className="reviewLinebreak"></div>

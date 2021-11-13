@@ -12,7 +12,7 @@
 #
 class Review < ApplicationRecord
     validates :rating, inclusion: { in: (1..5) }
-    validates :rating, :rating, :body, :user_id, :item_id, :headline, presence: true
+    validates :rating, :body, :user_id, :item_id, :headline, presence: true
 
     belongs_to :item, foreign_key: :item_id, class_name: :Item
     belongs_to :user, foreign_key: :user_id, class_name: :User
