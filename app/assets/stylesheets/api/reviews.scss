@@ -57,6 +57,7 @@
   width: 100px;
   border-radius: 8px;
   margin-right: 10px;
+  cursor: pointer;
 }
 .permission {
   display: flex;
@@ -65,4 +66,7 @@
 .reviewRaitingSession {
   display: flex;
   align-items: center;
+}
+.reviewBody{
+  margin: 5px 0;
 }

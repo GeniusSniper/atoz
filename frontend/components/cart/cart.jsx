@@ -172,9 +172,9 @@ class Cart extends React.Component {
                               [item.id]: parseInt(e.target.value) || 0,
                             });
                           }}
-                          className='cartUpdateText'
+                          className="cartUpdateText"
                         />
-                        <button className='cartUpdateButton'>Update</button>
+                        <button className="cartUpdateButton">Update</button>
                       </form>
                     )}
                     {/* <div
@@ -232,9 +232,11 @@ class Cart extends React.Component {
           <div>
             <div className="cartCheckout">
               <div>{total}</div>
-              <button className="cartCheckoutButton">
-                Proceed to checkout
-              </button>
+              <Link to="/checkout">
+                <button className="cartCheckoutButton">
+                  Proceed to checkout
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -254,7 +256,7 @@ let priceToS = (num) => {
       str += arr[0][i];
     }
   }
-  if(arr.length === 1) return str += '.00'
+  if (arr.length === 1) return (str += ".00");
   str += "." + arr[1].substring(0, 2);
   return str;
 };

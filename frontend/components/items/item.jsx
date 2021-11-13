@@ -198,7 +198,9 @@ class Item extends React.Component {
                   Add to Cart
                 </button>
                 <br />
-                <button className="purchaseButton">Buy Now</button>
+                <Link to={"/checkout"} className="buyNowButton">
+                  <button className="purchaseButton">Buy Now</button>
+                </Link>
               </div>
             </div>
           </div>
