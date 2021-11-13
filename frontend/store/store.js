@@ -4,7 +4,7 @@ import rootReducer from '../reducer/rootReducer';// root reducer that getting al
 import logger from 'redux-logger';
 
 const configureStore = (preloadedState = {}) => (
-    createStore(rootReducer, preloadedState, applyMiddleware(thunk, logger))
+    createStore(rootReducer, preloadedState, applyMiddleware(thunk))
 );
 
 export default configureStore;
