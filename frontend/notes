@@ -20,3 +20,17 @@ edit review raiting need more work //
 need better user experience //
 total raiting and avg raiting
 loading screen
+making icon visible 
+background in the index page either having some deals or move items up
+search with add evenlistener enter
+search button needs to align
+adding padding on the left of the search bar when user type something in
+showing result of a search in the search page
+extends the link click on the index page to the whole area box
+on the review section caplicaztion of Delete and Edit Review
+sumbit button on the section page need cursor pointer
+delte and edit review inthe item review section size to be the same as 'write a customer review'
+need space between big image and small image in the item page
+raiting for each item
+spacing for input need a little work on (pagging 5 px)
+adding avatar ??
