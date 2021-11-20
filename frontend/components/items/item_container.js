@@ -11,12 +11,21 @@ const mst = (state, props) => {
     let user;
     if(state.session.id) user = state.entities.users[state.session.id];
     let cart = JSON.parse(localStorage.getItem('cart')) || {};
+    let totalRaiting = 0;
+    let numOfRaiting = 0;
+    reviews.forEach( review => {
+        numOfRaiting++;
+        totalRaiting += review.rating;
+    })
+
     return {
         itemId,
         item,
         reviews,
         user,
-        cart
+        cart,
+        avgRating: totalRaiting/numOfRaiting || 0,
+        numOfRaiting
     }
 }
 const mdt = dispatch => ({

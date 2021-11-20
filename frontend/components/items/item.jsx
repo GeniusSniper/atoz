@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import ItemReviewsContainer from "../review/item_reviews_container";
+import Rating from "react-rating";
 
 class Item extends React.Component {
   constructor(props) {
@@ -90,6 +91,35 @@ class Item extends React.Component {
               <div className="midSessionFlex">
                 <h1 className="eachItemTitle">{item.item_name}</h1>
                 <div className="lineBreak"></div>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <Rating
+                    initialRating={this.props.avgRating}
+                    emptySymbol={
+                      <img
+                        src="https://atoz-seeds.s3.us-east-2.amazonaws.com/star_empty.png"
+                        className="icon"
+                        style={{ height: "20px" }}
+                      />
+                    }
+                    fullSymbol={
+                      <img
+                        src="https://atoz-seeds.s3.us-east-2.amazonaws.com/star_full.png"
+                        className="icon"
+                        style={{ height: "20px" }}
+                      />
+                    }
+                    readonly
+                  />
+                  {this.props.numOfRaiting > 1 ? (
+                    <div href="#allReviews" style={{ marginLeft: "5px" }}>
+                      {this.props.numOfRaiting} ratings
+                    </div>
+                  ) : (
+                    <div href="#allReviews" style={{ marginLeft: "5px" }}>
+                      {this.props.numOfRaiting} rating
+                    </div>
+                  )}
+                </div>
                 <p className="eachItemPrice price">
                   Price: ${priceToS("" + item.item_price)}
                 </p>
@@ -221,7 +251,9 @@ class Item extends React.Component {
               </button>
             </Link>
           </div>
-          <div className="allReviews">{allReviews}</div>
+          <div className="allReviews" id="allReviews">
+            {allReviews}
+          </div>
         </div>
       </div>
     );
