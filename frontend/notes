@@ -20,10 +20,10 @@ edit review raiting need more work //
 need better user experience //
 spacing for input need a little work on (pagging 5 px) //
 adding padding on the left of the search bar when user type something in //
+search button needs to align //
 loading screen
 making icon visible 
 search with add evenlistener enter
-search button needs to align
 showing result of a search in the search page
 extends the link click on the index page to the whole area box
 on the review section caplicaztion of Delete and Edit Review
