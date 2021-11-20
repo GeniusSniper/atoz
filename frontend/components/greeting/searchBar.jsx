@@ -12,10 +12,15 @@ class SearchBar extends React.Component {
   update(p) {
     return (e) => this.setState({ [p]: e.currentTarget.value });
   }
-
   render() {
+    let handleSearch = () => {
+      document.querySelector(".searchButton").click();
+    };
     return (
-      <div className="searchTool">
+      <div
+        className="searchTool"
+        onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+      >
         <input
           type="search"
           value={this.state.text}
@@ -25,7 +30,6 @@ class SearchBar extends React.Component {
         <Link to={`/search/${this.state.text}`}>
           <button
             className="searchButton"
-            // onKeyPress={(e) => e.key === "Enter" && handleSearch()}
             onClick={() => {
               this.setState({ text: "" });
             }}
