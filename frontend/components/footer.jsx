@@ -24,9 +24,13 @@ export default () => {
           rel="noopener noreferrer"
         >
           <img
+            src="https://img.icons8.com/color/32/000000/github--v3.png"
+            // className="icon"
+          />
+          {/* <img
             src="https://atoz-seeds.s3.us-east-2.amazonaws.com/GitHub-Mark-32px.png"
             alt="github"
-          />
+          /> */}
         </a>
       </div>
       <div>
@@ -35,8 +39,12 @@ export default () => {
           target="_blank"
           rel="noopener noreferrer"
         >
+          {/* <img
+            src="https://img.icons8.com/nolan/32/angelist.png"
+            className="icon"
+          /> */}
           <img
-            src="https://atoz-seeds.s3.us-east-2.amazonaws.com/AngelList_Black_Victory_Hand.png"
+            src="https://atoz-seeds.s3.us-east-2.amazonaws.com/AngelList_White_Victory_Hand.png"
             alt="AngelList"
             className="icon"
           />

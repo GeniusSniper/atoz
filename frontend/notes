@@ -18,5 +18,19 @@ proceed to checkout need more work //
 review need some star(react rating) //
 edit review raiting need more work //
 need better user experience //
-total raiting and avg raiting
+spacing for input need a little work on (pagging 5 px) //
+adding padding on the left of the search bar when user type something in //
+search button needs to align //
+on the review section caplicaztion of Delete and Edit Review //
+delte and edit review inthe item review section size to be the same as 'write a customer review' //
+sumbit button on the section page need cursor pointer //
+need space between big image and small image in the item page //
+making icon visible //
+raiting for each item //
+total raiting and avg raiting //
+showing result of a search in the search page //
+search with add evenlistener enter //
+extends the link click on the index page to the whole area box //
+background in the index page either having some deals or move items up //
 loading screen
+adding avatar ??

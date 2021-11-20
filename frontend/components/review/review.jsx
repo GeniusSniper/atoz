@@ -12,13 +12,13 @@ export default (props) => {
             onClick={() => props.deleteReview(props.review.id)}
             className="reviewButtons"
           >
-            delete
+            Delete
           </button>
         </div>
         &nbsp;
         <div>
           <Link to={`/items/${props.itemId}/${props.review.id}/edit`}>
-            <button className="reviewButtons">Edit review</button>
+            <button className="reviewButtons">Edit Review</button>
           </Link>
         </div>
       </div>
