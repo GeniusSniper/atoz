@@ -16,11 +16,22 @@ class Items extends React.Component {
               <Link to={`items/${item.id}`} className="gridItemLink">
                 <div className="gridContent">
                   <div className="gridImgBox">
-                    <img
-                      src={`${item.image_url[0]}`}
-                      alt="img_of_each_item"
-                      className="gridItemImg"
-                    />
+                    <div
+                      style={{
+                        display: "block",
+                        position: "relative",
+                        height: "100%",
+                        width: "100%",
+                        position: "relative",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <img
+                        src={`${item.image_url[0]}`}
+                        alt="img_of_each_item"
+                        className="gridItemImg"
+                      />
+                    </div>
                   </div>
                   <div className="itemTitle">{itemName(item.item_name)}</div>
                   <div className="gridItemPrice">
