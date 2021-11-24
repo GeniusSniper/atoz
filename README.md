@@ -4,7 +4,7 @@
 
 * [Atoz](https://atozs.herokuapp.com/) is a clone of [Amazon](www.amazon.com). It allow you to sign in/ sign up search items and add your favorite item to  your cart
 
-![image](https://user-images.githubusercontent.com/82611136/137414868-725fbd3f-26cd-4bd3-b015-8017c290f8d7.png)
+![image](https://user-images.githubusercontent.com/82611136/143283063-39c46d2a-4256-453e-b300-3b675d2481af.png)
 
 # Techologies used
 
