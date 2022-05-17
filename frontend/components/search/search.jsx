@@ -13,7 +13,7 @@ class Search extends React.Component {
     let need = this.props.match.params.keyword;
     let result = [];
     items.forEach((item) => {
-      if (item.item_name.includes(need)) {
+      if (item.item_name.toLowerCase().includes(need.toLowerCase())) {
         result.push(
           <div key={item.item_name}>
             <div className="searchItems">
