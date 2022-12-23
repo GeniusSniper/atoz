@@ -78,8 +78,12 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: atoz_production
+#   username: atoz
+#   password: <%= ENV['ATOZ_DATABASE_PASSWORD'] %>
 production:
   <<: *default
-  database: atoz_production
-  username: atoz
-  password: <%= ENV['ATOZ_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  
