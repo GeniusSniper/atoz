@@ -7,3 +7,4 @@ npm install
 bundle install
 rails db:migrate
 rails db:seed #if needed
+bundle exec rails assets:precompile
