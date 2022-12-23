@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create, :destroy, :update]
   end
   root to: 'static_pages#root' # for path '/' to the root static page controller root function
+  get '*path', to: "static_pages#frontend_index"
 end
