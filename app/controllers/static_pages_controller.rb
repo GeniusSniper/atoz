@@ -1,4 +1,4 @@
-class StaticPagesController < ApplicationController
+class StaticPagesController < ApplicationController; ActionController::Base
   def root #render the root.html.erb in static pages
   end
 
