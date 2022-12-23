@@ -18,5 +18,5 @@ services:
         fromDatabase:
           name: atoz
           property: connectionString
-      - key: RAILS_MASTER_KEY
+      - key: c5ce230f43a889f44591c9aaa032ce44s
         sync: false
